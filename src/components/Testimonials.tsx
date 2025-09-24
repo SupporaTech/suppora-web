@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Testimonials.css";
+import { ClockClockwise, Lightning, Users, Star, User   } from "@phosphor-icons/react";
+
 
 const Testimonials: React.FC = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -9,20 +11,20 @@ const Testimonials: React.FC = () => {
       name: "Александр Петров",
       position: "CEO, TechCorp",
       company: "Технологическая компания",
-      avatar: "👨‍💼",
+      avatar: <User size={48} color="#E7E7E7" weight="bold" />,
       rating: 5,
       text: "SUPPORA помогла нам снизить операционные расходы на 35% и значительно повысить качество клиентского сервиса. Профессиональная команда и отличные результаты.",
       results: [
-        "-35% расходов",
-        "+50% удовлетворенность клиентов",
-        "24/7 поддержка",
+        "-60% времени на HR",
+        "+40% эффективность",
+        "100% соответствие стандартам",
       ],
     },
     {
       name: "Мария Сидорова",
       position: "Директор по развитию, RetailPlus",
       company: "Розничная сеть",
-      avatar: "👩‍💼",
+      avatar: <User size={48} color="#E7E7E7" weight="bold" />,
       rating: 5,
       text: "Благодаря аутсорсингу HR-процессов мы смогли сосредоточиться на стратегическом развитии. SUPPORA обеспечивает высокое качество и надежность.",
       results: [
@@ -35,7 +37,7 @@ const Testimonials: React.FC = () => {
       name: "Дмитрий Козлов",
       position: "Финансовый директор, FinanceGroup",
       company: "Финансовая группа",
-      avatar: "👨‍💻",
+      avatar: <User size={48} color="#E7E7E7" weight="bold" />,
       rating: 5,
       text: "Отличная работа с финансовыми процессами. Автоматизация и оптимизация помогли нам сократить время обработки документов в 3 раза.",
       results: [
@@ -86,7 +88,7 @@ const Testimonials: React.FC = () => {
                   {[...Array(testimonials[currentTestimonial].rating)].map(
                     (_, i) => (
                       <span key={i} className="star">
-                        ⭐
+                        <Star size={24} color="#E7E7E7" weight="fill" />
                       </span>
                     )
                   )}
@@ -164,31 +166,31 @@ const Testimonials: React.FC = () => {
         <div className="testimonials-stats animate-fade-in-up">
           <div className="stats-grid">
             <div className="stat-item">
-              <div className="stat-icon">⭐</div>
+              <div className="stat-icon"><Star size={48} color="#6532ff" weight="bold" /></div>
               <div className="stat-content">
-                <div className="stat-value">4.9/5</div>
-                <div className="stat-label">Средняя оценка</div>
+                <div className="stat-value">82%</div>
+                <div className="stat-label">Оценка удовлетворенности</div>
               </div>
             </div>
             <div className="stat-item">
-              <div className="stat-icon">👥</div>
+              <div className="stat-icon"><Users size={48} color="#6532ff" weight="bold" /></div>
               <div className="stat-content">
-                <div className="stat-value">500+</div>
+                <div className="stat-value">10+</div>
                 <div className="stat-label">Довольных клиентов</div>
               </div>
             </div>
             <div className="stat-item">
-              <div className="stat-icon">🔄</div>
+              <div className="stat-icon"><ClockClockwise size={48} color="#6532ff " weight="bold" /></div>
               <div className="stat-content">
-                <div className="stat-value">95%</div>
-                <div className="stat-label">Повторных обращений</div>
+                <div className="stat-value">5 min</div>
+                <div className="stat-label">Среднее время ответа</div>
               </div>
             </div>
             <div className="stat-item">
-              <div className="stat-icon">⚡</div>
+              <div className="stat-icon"><Lightning size={48} color="#6532ff" weight="bold" /></div>
               <div className="stat-content">
-                <div className="stat-value">24ч</div>
-                <div className="stat-label">Среднее время ответа</div>
+                <div className="stat-value">91%</div>
+                <div className="stat-label">Соответсвие SLA</div>
               </div>
             </div>
           </div>

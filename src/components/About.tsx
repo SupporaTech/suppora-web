@@ -100,10 +100,10 @@ const About: React.FC = () => {
                     <span className="stat-number">50+</span>
                     <span className="stat-label">Специалистов</span>
                   </div>
-                  <div className="mission-stat">
+                  {/* <div className="mission-stat">
                     <span className="stat-number">24/7</span>
                     <span className="stat-label">Поддержка</span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Contact.css";
+import { EnvelopeSimple, Phone, TelegramLogo } from "@phosphor-icons/react";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -52,28 +53,27 @@ const Contact: React.FC = () => {
 
   const contactInfo = [
     {
-      icon: "📧",
+      icon: <EnvelopeSimple size={32} color="#E7E7E7" weight="bold" />,
       title: "Email",
       value: "info@suppora.com",
       description: "Напишите нам в любое время",
     },
     {
-      icon: "📞",
+      icon: <Phone size={32} color="#E7E7E7" weight="bold" />,
       title: "Телефон",
       value: "+7 (495) 123-45-67",
       description: "Пн-Пт с 9:00 до 18:00",
     },
+    // {
+    //   icon: "📍",
+    //   title: "Адрес",
+    //   value: "Москва, ул. Примерная, 123",
+    //   description: "Офис в центре города",
+    // },
     {
-      icon: "📍",
-      title: "Адрес",
-      value: "Москва, ул. Примерная, 123",
-      description: "Офис в центре города",
-    },
-    {
-      icon: "💬",
+      icon: <TelegramLogo size={32} color="#E7E7E7" weight="bold" />,
       title: "Telegram",
       value: "@suppora_support",
-      description: "Быстрая связь 24/7",
     },
   ];
 
@@ -121,13 +121,13 @@ const Contact: React.FC = () => {
               ))}
             </div>
 
-            <div className="contact-cta">
+            {/* <div className="contact-cta">
               <h4>Нужна срочная консультация?</h4>
               <p>Звоните прямо сейчас!</p>
               <a href="tel:+74951234567" className="btn btn-primary">
                 Позвонить сейчас
               </a>
-            </div>
+            </div> */}
           </div>
 
           <div className="contact-form-container animate-fade-in-right">
@@ -199,7 +199,7 @@ const Contact: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="form-group">
+                  {/* <div className="form-group">
                     <label htmlFor="service">Интересующая услуга</label>
                     <select
                       id="service"
@@ -214,7 +214,7 @@ const Contact: React.FC = () => {
                         </option>
                       ))}
                     </select>
-                  </div>
+                  </div> */}
 
                   <div className="form-group">
                     <label htmlFor="message">Сообщение *</label>

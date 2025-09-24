@@ -1,5 +1,11 @@
 import React from "react";
 import "./Footer.css";
+import {
+  EnvelopeSimple,
+  LinkedinLogo,
+  TelegramLogo,
+  WhatsappLogoIcon,
+} from "@phosphor-icons/react";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -26,10 +32,26 @@ const Footer: React.FC = () => {
   };
 
   const socialLinks = [
-    { name: "Telegram", icon: "📱", href: "#" },
-    { name: "WhatsApp", icon: "💬", href: "#" },
-    { name: "LinkedIn", icon: "💼", href: "#" },
-    { name: "Email", icon: "📧", href: "mailto:info@suppora.com" },
+    {
+      name: "Telegram",
+      icon: <TelegramLogo size={32} color="#E7E7E7" weight="bold" />,
+      href: "#",
+    },
+    {
+      name: "WhatsApp",
+      icon: <WhatsappLogoIcon size={32} color="#E7E7E7" weight="bold" />,
+      href: "#",
+    },
+    {
+      name: "LinkedIn",
+      icon: <LinkedinLogo size={32} color="#E7E7E7" weight="bold" />,
+      href: "#",
+    },
+    {
+      name: "Email",
+      icon: <EnvelopeSimple size={32} color="#E7E7E7" weight="bold" />,
+      href: "mailto:info@suppora.com",
+    },
   ];
 
   const scrollToSection = (sectionId: string) => {
