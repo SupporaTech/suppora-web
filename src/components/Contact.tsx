@@ -77,16 +77,6 @@ const Contact: React.FC = () => {
     },
   ];
 
-  const services = [
-    "Клиентская поддержка",
-    "Обработка данных",
-    "Финансовые услуги",
-    "HR процессы",
-    "E-commerce поддержка",
-    "IT аутсорсинг",
-    "Другое",
-  ];
-
   return (
     <section id="contact" className="contact">
       <div className="container">
@@ -120,14 +110,6 @@ const Contact: React.FC = () => {
                 </div>
               ))}
             </div>
-
-            {/* <div className="contact-cta">
-              <h4>Нужна срочная консультация?</h4>
-              <p>Звоните прямо сейчас!</p>
-              <a href="tel:+74951234567" className="btn btn-primary">
-                Позвонить сейчас
-              </a>
-            </div> */}
           </div>
 
           <div className="contact-form-container animate-fade-in-right">
