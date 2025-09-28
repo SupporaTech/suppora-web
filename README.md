@@ -1,6 +1,6 @@
 # SUPPORA - BPO Landing Page
 
-Современный лендинг для BPO компании SUPPORA, созданный с использованием React, TypeScript и Vite.
+Современный лендинг для BPO компании SUPPORA, созданный с использованием NextJS, TypeScript и TurboPack.
 
 ## 🚀 Особенности
 
@@ -34,10 +34,10 @@
 
 ## 🛠 Технологии
 
-- **React 19** - UI библиотека
+- **NextJS 15 + React 19** - UI библиотека
 - **TypeScript** - Типизация
-- **Vite** - Сборщик и dev сервер
-- **CSS3** - Стилизация с CSS переменными
+- **TurboPack** - Сборщик и dev сервер
+- **SASS** - Стилизация с SASS/CSS переменными
 - **ESLint** - Линтинг кода
 
 ## 🚀 Запуск проекта
@@ -51,29 +51,6 @@ npm run dev
 
 # Сборка для продакшена
 npm run build
-
-# Предварительный просмотр сборки
-npm run preview
-```
-
-## 📁 Структура проекта
-
-```
-src/
-├── components/          # React компоненты
-│   ├── Header.tsx      # Шапка сайта
-│   ├── Hero.tsx        # Главный экран
-│   ├── About.tsx       # О компании
-│   ├── Services.tsx    # Услуги
-│   ├── Advantages.tsx  # Преимущества
-│   ├── Testimonials.tsx # Отзывы
-│   ├── Contact.tsx     # Контакты
-│   ├── Footer.tsx      # Подвал
-│   └── *.css          # Стили компонентов
-├── hooks/              # Пользовательские хуки
-├── App.tsx            # Главный компонент
-├── App.css            # Глобальные стили
-└── main.tsx           # Точка входа
 ```
 
 ## 🎯 Функциональность
@@ -90,20 +67,6 @@ src/
 - **Desktop**: 1200px+
 - **Tablet**: 768px - 1199px
 - **Mobile**: 320px - 767px
-
-## 🔧 Настройка
-
-Для изменения цветовой схемы отредактируйте CSS переменные в `src/App.css`:
-
-```css
-:root {
-  --primary-color: #855ce4;
-  --accent-color: #7b53f3;
-  --background-color: #1e1e1e;
-  --text-color: #e7e7e7;
-  /* ... */
-}
-```
 
 ## 📈 Производительность
 

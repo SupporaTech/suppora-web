@@ -1,0 +1,312 @@
+@use "../../variables";
+
+.footer {
+  background: variables.$background-gradient;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+                  circle at 20% 20%,
+                  rgba(133, 92, 228, 0.1) 0%,
+                  transparent 50%
+  ),
+  radial-gradient(
+                  circle at 80% 80%,
+                  rgba(123, 83, 243, 0.1) 0%,
+                  transparent 50%
+  );
+  pointer-events: none;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding: 4rem 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.footerBrand {
+  max-width: 400px;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: variables.$font-heading;
+  font-size: 2rem;
+  font-weight: 700;
+  color: variables.$text-color;
+  margin-bottom: 1rem;
+}
+
+.logoText {
+  background: variables.$primary-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logoDot {
+  width: 8px;
+  height: 8px;
+  background: variables.$accent-color;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.footerDescription {
+  color: rgba(231, 231, 231, 0.8);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.footerSocial {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLink {
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: variables.$text-color;
+  text-decoration: none;
+  transition: all variables.$transition-normal;
+  backdrop-filter: blur(10px);
+}
+
+.socialLink:hover {
+  background: variables.$primary-color;
+  border-color: variables.$primary-color;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(133, 92, 228, 0.3);
+}
+
+.socialIcon {
+  font-size: 1.2rem;
+  filter: grayscale(0);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerLinks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.linkGroup h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: variables.$text-color;
+  margin-bottom: 1rem;
+  background: variables.$primary-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.linkGroup ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkGroup li {
+  margin-bottom: 0.75rem;
+}
+
+.linkGroup a {
+  color: rgba(231, 231, 231, 0.8);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all variables.$transition-fast;
+  position: relative;
+}
+
+.linkGroup a:hover {
+  color: variables.$primary-color;
+  padding-left: 0.5rem;
+}
+
+.linkGroup a::before {
+  content: "";
+  position: absolute;
+  left: -0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 2px;
+  background: variables.$primary-color;
+  transition: width variables.$transition-fast;
+}
+
+.linkGroup a:hover::before {
+  width: 3px;
+}
+
+.footerContact h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: variables.$text-color;
+  margin-bottom: 1rem;
+  background: variables.$accent-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: rgba(231, 231, 231, 0.8);
+  font-size: 0.95rem;
+}
+
+.contactIcon {
+  font-size: 1rem;
+  filter: grayscale(0);
+}
+
+.footerCta .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.footerBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.footerBottomContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.copyright {
+  color: rgba(231, 231, 231, 0.6);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.footerLegal {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  a {
+    color: rgba(231, 231, 231, 0.6);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color variables.$transition-fast;
+
+    &:hover {
+      color: variables.$primary-color;
+    }
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footerContent {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .footerLinks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footerBrand {
+    grid-column: 1 / -1;
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 0 2rem;
+  }
+
+  .footerLinks {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footerBottomContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .footerLegal {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerContent {
+    padding: 2rem 0 1.5rem;
+  }
+
+  .footerLogo {
+    font-size: 1.5rem;
+  }
+
+  .footerSocial {
+    gap: 0.75rem;
+  }
+
+  .socialLink {
+    width: 40px;
+    height: 40px;
+  }
+
+  .socialIcon {
+    font-size: 1rem;
+  }
+
+  .footerLegal {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footerLegal a {
+    font-size: 0.85rem;
+  }
+}

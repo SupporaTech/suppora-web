@@ -1,0 +1,202 @@
+@use "../../variables";
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(30, 30, 30, 0.9);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all variables.$transition-normal;
+
+  &.scrolled {
+    background: rgba(30, 30, 30, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.navbarContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: variables.$font-heading;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: variables.$text-color;
+  text-decoration: none;
+}
+
+.logoText {
+  background: variables.$primary-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logoDot {
+  width: 8px;
+  height: 8px;
+  background: variables.$accent-color;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navList a {
+  color: variables.$text-color;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all variables.$transition-fast;
+  position: relative;
+
+  &:hover {
+    color: variables.$primary-color;
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: variables.$primary-gradient;
+    transition: width variables.$transition-normal;
+  }
+}
+
+.navbarActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mobileMenuToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  span {
+    width: 100%;
+    height: 3px;
+    background: variables.$text-color;
+    border-radius: 2px;
+    transition: all variables.$transition-normal;
+    transform-origin: center;
+  }
+
+  &:hover {
+    span {
+      background: variables.$primary-color
+    }
+  }
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+  .nav {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(30, 30, 30, 0.98);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all variables.$transition-normal;
+
+    &.navOpen {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .navList {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    text-align: center;
+
+    a {
+      font-size: 1.2rem;
+      padding: 0.5rem 0;
+    }
+  }
+
+  .mobileMenuToggle {
+    display: flex;
+  }
+
+  .mobileMenuToggle.navOpen span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .mobileMenuToggle.navOpen span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobileMenuToggle.navOpen span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  .navbarActions .btn {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .navbarContent {
+    padding: 0.8rem 0;
+  }
+}
