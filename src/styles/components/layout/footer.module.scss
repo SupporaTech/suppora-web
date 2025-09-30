@@ -28,7 +28,7 @@
 
 .footerContent {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 3fr 1fr;
   gap: 3rem;
   padding: 4rem 0 2rem;
   position: relative;
@@ -145,7 +145,6 @@
 
 .linkGroup a:hover {
   color: variables.$primary-color;
-  padding-left: 0.5rem;
 }
 
 .linkGroup a::before {

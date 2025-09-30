@@ -2,10 +2,11 @@
 
 import React, { useState, useEffect } from "react";
 
-import styles from "@/styles/components/layout/navbar.module.scss";
 import Link from "next/link";
 
-const Navbar: React.FC = () => {
+import styles from "@/styles/components/layout/navbar.module.scss";
+
+export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -81,7 +82,7 @@ const Navbar: React.FC = () => {
                             className="btn btnPrimary"
                             onClick={() => scrollToSection("contact")}
                         >
-                            Получить консультацию
+                            Консультация
                         </button>
 
                         <button
@@ -99,5 +100,3 @@ const Navbar: React.FC = () => {
         </nav>
     );
 };
-
-export default Navbar;
