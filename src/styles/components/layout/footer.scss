@@ -1,7 +1,5 @@
-@use "../../variables";
-
 .footer {
-  background: variables.$background-gradient;
+  background: var(--background-gradient);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
 }
@@ -26,7 +24,7 @@
   pointer-events: none;
 }
 
-.footerContent {
+.footer-content {
   display: grid;
   grid-template-columns: 2fr 3fr 1fr;
   gap: 3rem;
@@ -35,49 +33,49 @@
   z-index: 1;
 }
 
-.footerBrand {
+.footer-brand {
   max-width: 400px;
 }
 
-.footerLogo {
+.footer-logo {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: variables.$font-heading;
+  font-family: var(--font-heading);
   font-size: 2rem;
   font-weight: 700;
-  color: variables.$text-color;
+  color: var(--text-color);
   margin-bottom: 1rem;
 }
 
-.logoText {
-  background: variables.$primary-gradient;
+.logo-text {
+  background: var(--primary-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.logoDot {
+.logo-dot {
   width: 8px;
   height: 8px;
-  background: variables.$accent-color;
+  background: var(--accent-color);
   border-radius: 50%;
   animation: pulse 2s infinite;
 }
 
-.footerDescription {
+.footer-description {
   color: rgba(231, 231, 231, 0.8);
   line-height: 1.6;
   margin-bottom: 2rem;
   font-size: 1rem;
 }
 
-.footerSocial {
+.footer-social {
   display: flex;
   gap: 1rem;
 }
 
-.socialLink {
+.social-link {
   width: 45px;
   height: 45px;
   background: rgba(255, 255, 255, 0.1);
@@ -86,68 +84,64 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: variables.$text-color;
+  color: var(--text-color);
   text-decoration: none;
-  transition: all variables.$transition-normal;
+  transition: all var(--transition-normal);
   backdrop-filter: blur(10px);
 }
 
-.socialLink:hover {
-  background: variables.$primary-color;
-  border-color: variables.$primary-color;
+.social-link:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(133, 92, 228, 0.3);
 }
 
-.socialIcon {
+.social-icon {
   font-size: 1.2rem;
   filter: grayscale(0);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.footerLinks {
+.footer-links {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
-.linkGroup h4 {
+.link-group h4 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: variables.$text-color;
+  color: var(--text-color);
   margin-bottom: 1rem;
-  background: variables.$primary-gradient;
+  background: var(--primary-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.linkGroup ul {
+.link-group ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.linkGroup li {
+.link-group li {
   margin-bottom: 0.75rem;
 }
 
-.linkGroup a {
+.link-group a {
   color: rgba(231, 231, 231, 0.8);
   text-decoration: none;
   font-size: 0.95rem;
-  transition: all variables.$transition-fast;
+  transition: all var(--transition-fast);
   position: relative;
 }
 
-.linkGroup a:hover {
-  color: variables.$primary-color;
+.link-group a:hover {
+  color: var(--primary-color);
 }
 
-.linkGroup a::before {
+.link-group a::before {
   content: "";
   position: absolute;
   left: -0.5rem;
@@ -155,33 +149,33 @@
   transform: translateY(-50%);
   width: 0;
   height: 2px;
-  background: variables.$primary-color;
-  transition: width variables.$transition-fast;
+  background: var(--primary-color);
+  transition: width var(--transition-fast);
 }
 
-.linkGroup a:hover::before {
+.link-group a:hover::before {
   width: 3px;
 }
 
-.footerContact h4 {
+.footer-contact h4 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: variables.$text-color;
+  color: var(--text-color);
   margin-bottom: 1rem;
-  background: variables.$accent-gradient;
+  background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.contactInfo {
+.contact-info {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   margin-bottom: 2rem;
 }
 
-.contactItem {
+.contact-item {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -189,24 +183,24 @@
   font-size: 0.95rem;
 }
 
-.contactIcon {
+.contact-icon {
   font-size: 1rem;
   filter: grayscale(0);
 }
 
-.footerCta .btn {
+.footer-cta .btn {
   width: 100%;
   justify-content: center;
 }
 
-.footerBottom {
+.footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 2rem 0;
   position: relative;
   z-index: 1;
 }
 
-.footerBottomContent {
+.footer-bottom-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -220,92 +214,92 @@
   margin: 0;
 }
 
-.footerLegal {
+.footer-legal {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
+}
 
-  a {
-    color: rgba(231, 231, 231, 0.6);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color variables.$transition-fast;
+.footer-legal a {
+  color: rgba(231, 231, 231, 0.6);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color var(--transition-fast);
+}
 
-    &:hover {
-      color: variables.$primary-color;
-    }
-  }
+.footer-legal a:hover {
+  color: var(--primary-color);
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .footerContent {
+  .footer-content {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
 
-  .footerLinks {
+  .footer-links {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .footerBrand {
+  .footer-brand {
     grid-column: 1 / -1;
     max-width: none;
   }
 }
 
 @media (max-width: 768px) {
-  .footerContent {
+  .footer-content {
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 3rem 0 2rem;
   }
 
-  .footerLinks {
+  .footer-links {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  .footerBottomContent {
+  .footer-bottom-content {
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
   }
 
-  .footerLegal {
+  .footer-legal {
     justify-content: center;
     gap: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .footerContent {
+  .footer-content {
     padding: 2rem 0 1.5rem;
   }
 
-  .footerLogo {
+  .footer-logo {
     font-size: 1.5rem;
   }
 
-  .footerSocial {
+  .footer-social {
     gap: 0.75rem;
   }
 
-  .socialLink {
+  .social-link {
     width: 40px;
     height: 40px;
   }
 
-  .socialIcon {
+  .social-icon {
     font-size: 1rem;
   }
 
-  .footerLegal {
+  .footer-legal {
     flex-direction: column;
     gap: 1rem;
   }
 
-  .footerLegal a {
+  .footer-legal a {
     font-size: 0.85rem;
   }
 }

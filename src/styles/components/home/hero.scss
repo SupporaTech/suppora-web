@@ -1,15 +1,13 @@
-@use "../../variables";
-
 .hero {
   position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: variables.$background-gradient;
+  background: var(--background-gradient);
 }
 
-.heroBackground {
+.hero-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -18,7 +16,7 @@
   z-index: 1;
 }
 
-.heroGradient {
+.hero-gradient {
   position: absolute;
   top: 0;
   left: 0;
@@ -51,7 +49,7 @@
   );
 }
 
-.heroParticles {
+.hero-particles {
   position: absolute;
   top: 0;
   left: 0;
@@ -63,7 +61,7 @@
   position: absolute;
   width: 4px;
   height: 4px;
-  background: variables.$primary-color;
+  background: var(--primary-color);
   border-radius: 50%;
   animation: float 6s ease-in-out infinite;
 }
@@ -110,7 +108,7 @@
   }
 }
 
-.heroContent {
+.hero-content {
   position: relative;
   z-index: 2;
   display: grid;
@@ -120,26 +118,26 @@
   padding: 2rem 0;
 }
 
-.heroText {
+.hero-text {
   max-width: 600px;
 }
 
-.heroTitle {
+.hero-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  color: variables.$text-color;
+  color: var(--text-color);
 }
 
-.gradientText {
-  background: variables.$primary-gradient;
+.gradient-text {
+  background: var(--primary-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.heroSubtitle {
+.hero-subtitle {
   font-size: 1.3rem;
   line-height: 1.6;
   color: rgba(231, 231, 231, 0.8);
@@ -147,7 +145,7 @@
   max-width: 500px;
 }
 
-.heroStats {
+.hero-stats {
   display: flex;
   gap: 2rem;
   margin-bottom: 2.5rem;
@@ -159,35 +157,35 @@
   align-items: flex-start;
 }
 
-.statNumber {
+.stat-number {
   font-size: 2.5rem;
   font-weight: 700;
-  background: variables.$primary-gradient;
+  background: var(--primary-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   line-height: 1;
 }
 
-.statLabel {
+.stat-label {
   font-size: 0.9rem;
   color: rgba(231, 231, 231, 0.7);
   margin-top: 0.5rem;
 }
 
-.heroActions {
+.hero-actions {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
-.heroVisual {
+.hero-visual {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.heroCard {
+.hero-card {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
@@ -209,7 +207,7 @@
   }
 }
 
-.cardHeader {
+.card-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -218,38 +216,38 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.cardDots {
+.card-dots {
   display: flex;
   gap: 0.5rem;
 }
 
-.cardDots span {
+.card-dots span {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: variables.$accent-color;
+  background: var(--accent-color);
 }
 
-.cardDots span:nth-child(1) {
+.card-dots span:nth-child(1) {
   background: #ff5f57;
 }
 
-.cardDots span:nth-child(2) {
+.card-dots span:nth-child(2) {
   background: #ffbd2e;
 }
 
-.cardDots span:nth-child(3) {
+.card-dots span:nth-child(3) {
   background: #28ca42;
 }
 
-.cardHeader h3 {
+.card-header h3 {
   font-size: 1.2rem;
   font-weight: 600;
-  color: variables.$text-color;
+  color: var(--text-color);
   margin: 0;
 }
 
-.cardContent {
+.card-content {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -262,18 +260,18 @@
   padding: 0.5rem 0;
 }
 
-.metricLabel {
+.metric-label {
   font-size: 0.9rem;
   color: rgba(231, 231, 231, 0.7);
 }
 
-.metricValue {
+.metric-value {
   font-size: 1.1rem;
   font-weight: 600;
-  color: variables.$primary-color;
+  color: var(--primary-color);
 }
 
-.progressBar {
+.progress-bar {
   width: 100%;
   height: 6px;
   background: rgba(255, 255, 255, 0.1);
@@ -282,17 +280,17 @@
   margin-top: 1rem;
 }
 
-.progressFill {
+.progress-fill {
   width: 75%;
   height: 100%;
-  background: variables.$primary-gradient;
+  background: var(--primary-gradient);
   border-radius: 3px;
   animation: progressFill 2s ease-out;
 }
 
 @keyframes progressFill {
   from {
-    width: 0;
+    width: 0%;
   }
   to {
     width: 75%;
@@ -301,13 +299,13 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .heroContent {
+  .hero-content {
     grid-template-columns: 1fr;
     gap: 3rem;
     text-align: center;
   }
 
-  .heroStats {
+  .hero-stats {
     justify-content: center;
   }
 }
@@ -318,40 +316,40 @@
     padding-top: 100px;
   }
 
-  .heroStats {
+  .hero-stats {
     flex-direction: column;
     gap: 1rem;
     align-items: center;
   }
 
-  .heroActions {
+  .hero-actions {
     justify-content: center;
   }
 
-  .heroCard {
+  .hero-card {
     max-width: 350px;
     padding: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .heroActions {
+  .hero-actions {
     flex-direction: column;
     align-items: center;
   }
 
-  .heroActions .btn {
+  .hero-actions .btn {
     width: 100%;
     max-width: 280px;
   }
 
-  .heroCard {
+  .hero-card {
     padding: 1rem;
   }
 }
 
 /* Новые фиолетовые элементы */
-.heroShapes {
+.hero-shapes {
   position: absolute;
   top: 0;
   left: 0;
@@ -363,12 +361,12 @@
 .shape {
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(45deg, variables.$primary-color, variables.$accent-color);
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
   opacity: 0.1;
   animation: shapeFloat 8s ease-in-out infinite;
 }
 
-.shape1 {
+.shape-1 {
   width: 120px;
   height: 120px;
   top: 15%;
@@ -376,7 +374,7 @@
   animation-delay: 0s;
 }
 
-.shape2 {
+.shape-2 {
   width: 80px;
   height: 80px;
   top: 25%;
@@ -384,7 +382,7 @@
   animation-delay: 2s;
 }
 
-.shape3 {
+.shape-3 {
   width: 60px;
   height: 60px;
   top: 60%;
@@ -392,7 +390,7 @@
   animation-delay: 4s;
 }
 
-.shape4 {
+.shape-4 {
   width: 100px;
   height: 100px;
   top: 70%;
@@ -400,7 +398,7 @@
   animation-delay: 1s;
 }
 
-.shape5 {
+.shape-5 {
   width: 40px;
   height: 40px;
   top: 40%;
@@ -408,7 +406,7 @@
   animation-delay: 3s;
 }
 
-.shape6 {
+.shape-6 {
   width: 90px;
   height: 90px;
   top: 10%;
@@ -428,7 +426,7 @@
   }
 }
 
-.heroLights {
+.hero-lights {
   position: absolute;
   top: 0;
   left: 0;
@@ -440,12 +438,12 @@
 .light {
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(circle, variables.$primary-color, transparent);
+  background: radial-gradient(circle, var(--primary-color), transparent);
   opacity: 0.3;
   animation: lightPulse 4s ease-in-out infinite;
 }
 
-.light1 {
+.light-1 {
   width: 200px;
   height: 200px;
   top: 20%;
@@ -453,7 +451,7 @@
   animation-delay: 0s;
 }
 
-.light2 {
+.light-2 {
   width: 150px;
   height: 150px;
   top: 60%;
@@ -461,7 +459,7 @@
   animation-delay: 2s;
 }
 
-.light3 {
+.light-3 {
   width: 100px;
   height: 100px;
   top: 80%;
@@ -481,7 +479,7 @@
   }
 }
 
-.heroGrid {
+.hero-grid {
   position: absolute;
   top: 0;
   left: 0;

@@ -1,4 +1,4 @@
-@use "@/styles/variables";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap");
 
 * {
   margin: 0;
@@ -11,10 +11,11 @@ html {
 }
 
 body {
-  font-family: variables.$font-primary;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  sans-serif;
   line-height: 1.6;
-  color: variables.$text-color;
-  background: variables.$background-color;
+  color: #e7e7e7;
+  background-color: #1e1e1e;
   overflow-x: hidden;
 }
 
@@ -24,7 +25,53 @@ body {
   flex-direction: column;
 }
 
-.wrapper {
+/* CSS Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Color Variables */
+  --primary-color: #855ce4;
+  --accent-color: #7b53f3;
+  --background-color: #1e1e1e;
+  --text-color: #e7e7e7;
+  --primary-gradient: linear-gradient(135deg, #6532ff 0%, #6e51c8 100%);
+  --accent-gradient: linear-gradient(135deg, #9d4cff 0%, #6e51c8 100%);
+  --background-gradient: linear-gradient(135deg, #1e1e1e 0%, #2d2c31 100%);
+
+  /* Typography */
+  --font-primary: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  sans-serif;
+  --font-heading: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, sans-serif;
+
+  /* Spacing */
+  --section-padding: 80px 0;
+  --container-padding: 0 20px;
+  --max-width: 1200px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.App {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -37,7 +84,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: variables.$font-heading;
+  font-family: var(--font-heading);
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -63,9 +110,9 @@ p {
 
 /* Container */
 .container {
-  max-width: variables.$max-width;
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: variables.$container-padding;
+  padding: var(--container-padding);
 }
 
 /* Buttons */
@@ -74,62 +121,62 @@ p {
   padding: 12px 30px;
   border: none;
   border-radius: 50px;
-  font-family: variables.$font-primary;
+  font-family: var(--font-primary);
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   text-align: center;
   cursor: pointer;
-  transition: all variables.$transition-normal;
+  transition: all var(--transition-normal);
   position: relative;
   overflow: hidden;
 }
 
-.btnPrimary {
-  background: variables.$primary-gradient;
+.btn-primary {
+  background: var(--primary-gradient);
   color: white;
   box-shadow: 0 4px 15px rgba(133, 92, 228, 0.3);
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(133, 92, 228, 0.4);
-  }
 }
 
-.btnSecondary {
-  background: transparent;
-  color: variables.$primary-color;
-  border: 2px solid variables.$primary-color;
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(133, 92, 228, 0.4);
+}
 
-  &:hover {
-    background: variables.$primary-color;
-    color: white;
-  }
+.btn-secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-color);
+  color: white;
 }
 
 /* Sections */
 section {
-  padding: variables.$section-padding;
+  padding: var(--section-padding);
 }
 
-.sectionTitle {
+.section-title {
   text-align: center;
   margin-bottom: 3rem;
+}
 
-  h2 {
-    background: variables.$primary-gradient;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 1rem;
-  }
+.section-title h2 {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
 
-  p {
-    font-size: 1.2rem;
-    color: rgba(231, 231, 231, 0.8);
-    max-width: 600px;
-    margin: 0 auto;
-  }
+.section-title p {
+  font-size: 1.2rem;
+  color: rgba(231, 231, 231, 0.8);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* Grid */
@@ -138,15 +185,15 @@ section {
   gap: 2rem;
 }
 
-.grid2 {
+.grid-2 {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.grid3 {
+.grid-3 {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.grid4 {
+.grid-4 {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
@@ -157,13 +204,13 @@ section {
   border-radius: 20px;
   padding: 2rem;
   backdrop-filter: blur(10px);
-  transition: all variables.$transition-normal;
+  transition: all var(--transition-normal);
+}
 
-  &:hover {
-    transform: translateY(-5px);
-    border-color: variables.$primary-color;
-    box-shadow: 0 20px 40px rgba(133, 92, 228, 0.1);
-  }
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+  box-shadow: 0 20px 40px rgba(133, 92, 228, 0.1);
 }
 
 /* Animations */
@@ -222,41 +269,46 @@ section {
   }
 }
 
-.animateFadeInUp {
+.animate-fade-in-up {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s ease forwards;
 }
 
-.animateFadeInLeft {
+.animate-fade-in-left {
   opacity: 0;
   transform: translateX(-30px);
   animation: fadeInLeft 0.8s ease forwards;
 }
 
-.animateFadeInRight {
+.animate-fade-in-right {
   opacity: 0;
   transform: translateX(30px);
   animation: fadeInRight 0.8s ease forwards;
 }
 
 /* Scroll-triggered animations */
-.animateOnScroll {
+.animate-on-scroll {
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.8s ease;
+}
 
-  &.animated {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .grid2,
-  .grid3,
-  .grid4 {
+  :root {
+    --section-padding: 60px 0;
+    --container-padding: 0 15px;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
     grid-template-columns: 1fr;
   }
 
@@ -266,6 +318,10 @@ section {
 }
 
 @media (max-width: 480px) {
+  :root {
+    --section-padding: 40px 0;
+  }
+
   .btn {
     padding: 10px 25px;
     font-size: 0.9rem;

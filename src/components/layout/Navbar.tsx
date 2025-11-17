@@ -1,12 +1,10 @@
-"use client";
+'use client';
 
 import React, { useState, useEffect } from "react";
 
-import Link from "next/link";
+import '@/styles/components/layout/navbar.scss';
 
-import styles from "@/styles/components/layout/navbar.module.scss";
-
-export default function Navbar() {
+const Header: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -28,20 +26,20 @@ export default function Navbar() {
     };
 
     return (
-        <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
+        <header className={`header ${isScrolled ? "scrolled" : ""}`}>
             <div className="container">
-                <div className={styles.navbarContent}>
-                    <div className={styles.logo}>
-                        <span className={styles.logoText}>SUPPORA</span>
-                        <span className={styles.logoDot}></span>
+                <div className="header-content">
+                    <div className="logo">
+                        <span className="logo-text">SUPPORA</span>
+                        <span className="logo-dot"></span>
                     </div>
 
-                    <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.navOpen : ""}`}>
-                        <ul className={styles.navList}>
+                    <nav className={`nav ${isMobileMenuOpen ? "nav-open" : ""}`}>
+                        <ul className="nav-list">
                             <li>
-                                <Link href="#home" onClick={() => scrollToSection("home")}>
+                                <a href="#home" onClick={() => scrollToSection("home")}>
                                     Главная
-                                </Link>
+                                </a>
                             </li>
                             <li>
                                 <a href="#about" onClick={() => scrollToSection("about")}>
@@ -77,16 +75,16 @@ export default function Navbar() {
                         </ul>
                     </nav>
 
-                    <div className={styles.navbarActions}>
+                    <div className="header-actions">
                         <button
-                            className="btn btnPrimary"
+                            className="btn btn-primary"
                             onClick={() => scrollToSection("contact")}
                         >
                             Консультация
                         </button>
 
                         <button
-                            className={styles.mobileMenuToggle}
+                            className="mobile-menu-toggle"
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             aria-label="Toggle mobile menu"
                         >
@@ -97,6 +95,8 @@ export default function Navbar() {
                     </div>
                 </div>
             </div>
-        </nav>
+        </header>
     );
 };
+
+export default Header;

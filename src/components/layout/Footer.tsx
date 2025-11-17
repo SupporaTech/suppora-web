@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
 import React from "react";
 
 import {
+    EnvelopeSimple,
+    LinkedInLogo,
     TelegramLogo,
     WhatsAppLogo,
-    LinkedInLogo,
-    EnvelopeSimple
 } from "@/components/icons";
 
-import styles from "@/styles/components/layout/footer.module.scss";
+import '@/styles/components/layout/footer.scss';
 
 const Footer: React.FC = () => {
     const currentYear = new Date().getFullYear();
@@ -66,34 +66,34 @@ const Footer: React.FC = () => {
     };
 
     return (
-        <footer className={styles.footer}>
+        <footer className="footer">
             <div className="container">
-                <div className={styles.footerContent}>
-                    <div className={styles.footerBrand}>
-                        <div className={styles.footerLogo}>
-                            <span className={styles.logoText}>SUPPORA</span>
-                            <span className={styles.logoDot}></span>
+                <div className="footer-content">
+                    <div className="footer-brand">
+                        <div className="footer-logo">
+                            <span className="logo-text">SUPPORA</span>
+                            <span className="logo-dot"></span>
                         </div>
-                        <p className={styles.footerDescription}>
+                        <p className="footer-description">
                             Ваш надежный партнер в сфере BPO-услуг. Оптимизируем
                             бизнес-процессы для повышения эффективности и снижения затрат.
                         </p>
-                        <div className={styles.footerSocial}>
+                        <div className="footer-social">
                             {socialLinks.map((social, index) => (
                                 <a
                                     key={index}
                                     href={social.href}
-                                    className={styles.socialLink}
+                                    className="social-link"
                                     aria-label={social.name}
                                 >
-                                    <span className={styles.socialIcon}>{social.icon}</span>
+                                    <span className="social-icon">{social.icon}</span>
                                 </a>
                             ))}
                         </div>
                     </div>
 
-                    <div className={styles.footerLinks}>
-                        <div className={styles.linkGroup}>
+                    <div className="footer-links">
+                        <div className="link-group">
                             <h4>Компания</h4>
                             <ul>
                                 {footerLinks.company.map((link, index) => (
@@ -112,7 +112,7 @@ const Footer: React.FC = () => {
                             </ul>
                         </div>
 
-                        <div className={styles.linkGroup}>
+                        <div className="link-group">
                             <h4>Услуги</h4>
                             <ul>
                                 {footerLinks.services.map((link, index) => (
@@ -123,7 +123,7 @@ const Footer: React.FC = () => {
                             </ul>
                         </div>
 
-                        <div className={styles.linkGroup}>
+                        <div className="link-group">
                             <h4>Поддержка</h4>
                             <ul>
                                 {footerLinks.support.map((link, index) => (
@@ -145,40 +145,40 @@ const Footer: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className={styles.linkGroup}>
+                    <div className="footer-contact">
                         <h4>Контакты</h4>
-                        <div className={styles.contactInfo}>
-                            <div className={styles.contactItem}>
-                                <span className={styles.contactIcon}>📧</span>
+                        <div className="contact-info">
+                            <div className="contact-item">
+                                <span className="contact-icon">📧</span>
                                 <span>info@suppora.com</span>
                             </div>
-                            <div className={styles.contactItem}>
-                                <span className={styles.contactIcon}>📞</span>
+                            <div className="contact-item">
+                                <span className="contact-icon">📞</span>
                                 <span>+7 (495) 123-45-67</span>
                             </div>
-                            <div className={styles.contactItem}>
-                                <span className={styles.contactIcon}>📍</span>
+                            <div className="contact-item">
+                                <span className="contact-icon">📍</span>
                                 <span>Москва, ул. Примерная, 123</span>
                             </div>
                         </div>
 
-                        <div className={styles.footerCta}>
+                        <div className="footer-cta">
                             <button
-                                className="btn btnPrimary"
+                                className="btn btn-primary"
                                 onClick={() => scrollToSection("contact")}
                             >
-                                Получить консультацию
+                                Консультация
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <div className={styles.footerBottom}>
-                    <div className={styles.footerBottomContent}>
-                        <p className={styles.copyright}>
+                <div className="footer-bottom">
+                    <div className="footer-bottom-content">
+                        <p className="copyright">
                             © {currentYear} SUPPORA. Все права защищены.
                         </p>
-                        <div className={styles.footerLegal}>
+                        <div className="footer-legal">
                             <a href="#">Политика конфиденциальности</a>
                             <a href="#">Условия использования</a>
                             <a href="#">Пользовательское соглашение</a>
