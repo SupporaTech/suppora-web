@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="footer">
-      <div className="container">
+      {/* <div className="container">
         <div className="footer-content">
           <div className="footer-brand">
             <div className="footer-logo">
@@ -181,7 +181,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 };
