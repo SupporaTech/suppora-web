@@ -6,6 +6,7 @@ import "./globals.scss";
 
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 
 export const metadata: Metadata = {
   applicationName: "SUPPORA",
@@ -30,13 +31,15 @@ type Props = React.PropsWithChildren;
 
 export default function RootLayout({ children }: Readonly<Props>) {
   return (
-    <html lang="en">
+    <html lang="ru">
       <body className={`antialiased`}>
-        <div className="wrapper">
-            <Navbar />
-            {children}
-            <Footer />
-        </div>
+        <LanguageProvider>
+          <div className="wrapper">
+              <Navbar />
+              {children}
+              <Footer />
+          </div>
+        </LanguageProvider>
       </body>
     </html>
   );

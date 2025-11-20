@@ -1,0 +1,316 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "advantages": "Advantages",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "consultation": "Consultation"
+  },
+  "hero": {
+    "title": "Optimize business processes with",
+    "subtitle": "Professional BPO solutions to improve your business efficiency. Reduce operational costs by up to 30% and accelerate growth.",
+    "stats": {
+      "clients": "Satisfied clients",
+      "experience": "Years of experience",
+      "savings": "Cost savings"
+    },
+    "buttons": {
+      "consultation": "Get consultation",
+      "presentation": "Download presentation"
+    },
+    "dashboard": {
+      "title": "SUPPORA Dashboard",
+      "efficiency": "Efficiency",
+      "savings": "Savings",
+      "processingTime": "Processing time"
+    }
+  },
+  "about": {
+    "title": "About SUPPORA",
+    "subtitle": "We are a team of professionals specializing in business process optimization and outsourcing for companies of any scale",
+    "features": [
+      {
+        "title": "Reliability",
+        "description": "We guarantee high quality services and compliance with all contractual obligations"
+      },
+      {
+        "title": "Speed",
+        "description": "Rapid implementation of solutions and adaptation to your business needs"
+      },
+      {
+        "title": "Quality",
+        "description": "We use modern technologies and best practices in BPO"
+      }
+    ],
+    "mission": {
+      "title": "Our Mission",
+      "description": "We help companies achieve maximum efficiency through business process optimization and professional outsourcing.",
+      "stats": [
+        {
+          "number": "500+",
+          "label": "Projects"
+        },
+        {
+          "number": "50+",
+          "label": "Specialists"
+        }
+      ]
+    },
+    "values": {
+      "title": "Our Values",
+      "items": [
+        "Transparency in work",
+        "Individual approach",
+        "Continuous development",
+        "Customer focus"
+      ]
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Full range of BPO services to optimize your business and improve operational efficiency",
+    "items": [
+      {
+        "icon": "📞",
+        "title": "Technical Support L1",
+        "description": "Professional customer support in any language",
+        "features": [
+          "Multi-channel support (Email, chats, calls)",
+          "Monitoring & Alert response",
+          "Customer orientation"
+        ]
+      },
+      {
+        "icon": "📊",
+        "title": "Technical Support L1 and L2",
+        "description": "Professional customer support in any language",
+        "features": [
+          "Multi-channel support (Email, chats, calls)",
+          "Monitoring & Alert response",
+          "Customer orientation"
+        ]
+      }
+    ],
+    "button": "Learn more",
+    "cta": {
+      "title": "Need a custom consultation?",
+      "description": "Our experts will help you find the optimal solution for your business",
+      "button": "Order consultation"
+    }
+  },
+  "advantages": {
+    "title": "Why Choose SUPPORA",
+    "subtitle": "We provide comprehensive solutions that help companies reach new heights in efficiency",
+    "items": [
+      {
+        "number": "01",
+        "title": "Multilingual support (RU, UA, EN, ES...)",
+        "description": "Save up to 30% on operational costs through process optimization",
+        "icon": "💰"
+      },
+      {
+        "number": "02",
+        "title": "Remote scalable teams (1–10+ agents)",
+        "description": "Increase productivity by 40% through automation",
+        "icon": "⚡"
+      },
+      {
+        "number": "03",
+        "title": "Fast launch (3–5 days)",
+        "description": "Flexible solutions that grow with your business",
+        "icon": "📈"
+      },
+      {
+        "number": "04",
+        "title": "Technical expertise (API, logs, SQL)",
+        "description": "24/7 technical support and monitoring",
+        "icon": "🛡️"
+      },
+      {
+        "number": "05",
+        "title": "Flexibility and security (GDPR, VPN access, reports)",
+        "description": "Compliance with all security and data protection standards",
+        "icon": "🔒"
+      },
+      {
+        "number": "06",
+        "title": "Human-centered culture",
+        "description": "Project launch within 2-4 weeks with minimal risks",
+        "icon": "🚀"
+      }
+    ],
+    "stats": [
+      {
+        "value": "500+",
+        "label": "Satisfied clients"
+      },
+      {
+        "value": "30%",
+        "label": "Average savings"
+      },
+      {
+        "value": "99.9%",
+        "label": "Service uptime"
+      }
+    ],
+    "cta": {
+      "title": "Ready to start saving?",
+      "description": "Get a free consultation and find out how much you can save",
+      "primaryButton": "Get consultation",
+      "secondaryButton": "Download cases",
+      "chartLabels": {
+        "before": "Before",
+        "after": "After"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Client Testimonials",
+    "subtitle": "Over 500 companies trust us with their business process optimization",
+    "items": [
+      {
+        "name": "Alexander Petrov",
+        "position": "CEO, TechCorp",
+        "company": "Technology company",
+        "rating": 5,
+        "text": "SUPPORA helped us reduce operational costs by 35% and significantly improve customer service quality. Professional team and excellent results.",
+        "results": [
+          "-60% time on HR",
+          "+40% efficiency",
+          "100% compliance with standards"
+        ]
+      },
+      {
+        "name": "Maria Sidorova",
+        "position": "Development Director, RetailPlus",
+        "company": "Retail chain",
+        "rating": 5,
+        "text": "Thanks to HR process outsourcing, we were able to focus on strategic development. SUPPORA ensures high quality and reliability.",
+        "results": [
+          "-60% time on HR",
+          "+40% efficiency",
+          "100% compliance with standards"
+        ]
+      },
+      {
+        "name": "Dmitry Kozlov",
+        "position": "CFO, FinanceGroup",
+        "company": "Financial group",
+        "rating": 5,
+        "text": "Excellent work with financial processes. Automation and optimization helped us reduce document processing time by 3 times.",
+        "results": [
+          "-70% processing time",
+          "+90% accuracy",
+          "Full automation"
+        ]
+      }
+    ],
+    "resultsTitle": "Achieved results:",
+    "stats": [
+      {
+        "value": "82%",
+        "label": "Satisfaction rating"
+      },
+      {
+        "value": "10+",
+        "label": "Satisfied clients"
+      },
+      {
+        "value": "5 min",
+        "label": "Average response time"
+      },
+      {
+        "value": "91%",
+        "label": "SLA compliance"
+      }
+    ],
+    "ariaLabels": {
+      "previous": "Previous testimonial",
+      "next": "Next testimonial",
+      "goTo": "Go to testimonial"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Ready to start cooperation? Leave a request and we will contact you within an hour",
+    "info": {
+      "title": "Contact Information",
+      "description": "We are always ready to answer your questions and discuss cooperation opportunities. Choose a convenient way to contact us."
+    },
+    "form": {
+      "title": "Submit a request",
+      "subtitle": "Fill out the form and we will contact you",
+      "name": "Name *",
+      "namePlaceholder": "Your name",
+      "email": "Email *",
+      "emailPlaceholder": "your@email.com",
+      "company": "Company",
+      "companyPlaceholder": "Company name",
+      "phone": "Phone",
+      "phonePlaceholder": "+1 (999) 123-45-67",
+      "message": "Message *",
+      "messagePlaceholder": "Tell us about your needs...",
+      "submit": "Submit request",
+      "submitting": "Sending...",
+      "success": {
+        "title": "Request sent!",
+        "message": "Thank you for contacting us. We will contact you within an hour."
+      }
+    },
+    "methods": [
+      {
+        "title": "Email",
+        "value": "info@suppora.com",
+        "description": "Write to us anytime"
+      },
+      {
+        "title": "Phone",
+        "value": "+7 (495) 123-45-67",
+        "description": "Mon-Fri 9:00 AM - 6:00 PM"
+      },
+      {
+        "title": "Telegram",
+        "value": "@suppora_support"
+      }
+    ]
+  },
+  "footer": {
+    "description": "Your reliable partner in BPO services. We optimize business processes to improve efficiency and reduce costs.",
+    "links": {
+      "company": "Company",
+      "services": "Services",
+      "support": "Support"
+    },
+    "companyLinks": [
+      { "name": "About", "href": "#about" },
+      { "name": "Services", "href": "#services" },
+      { "name": "Advantages", "href": "#advantages" },
+      { "name": "Testimonials", "href": "#testimonials" }
+    ],
+    "serviceLinks": [
+      { "name": "Customer Support", "href": "#" },
+      { "name": "Data Processing", "href": "#" },
+      { "name": "Financial Services", "href": "#" },
+      { "name": "HR Processes", "href": "#" }
+    ],
+    "supportLinks": [
+      { "name": "Contact", "href": "#contact" },
+      { "name": "Technical Support", "href": "#" },
+      { "name": "Documentation", "href": "#" },
+      { "name": "FAQ", "href": "#" }
+    ],
+    "contact": {
+      "title": "Contacts",
+      "consultation": "Consultation"
+    },
+    "copyright": "All rights reserved.",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "agreement": "User Agreement"
+    }
+  }
+}
+

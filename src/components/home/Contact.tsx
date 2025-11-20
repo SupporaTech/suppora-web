@@ -2,10 +2,17 @@
 
 import React, { useState } from "react";
 import { EnvelopeSimple, PhoneLogo, TelegramLogo } from "@/components/icons";
+import { useLanguage } from "@/contexts/LanguageContext";
+import ruContent from "@/data/ru/content.json";
+import enContent from "@/data/en/content.json";
 
 import '@/styles/components/home/contact.scss';
 
 const Contact: React.FC = () => {
+    const { language } = useLanguage();
+    const contentData = language === 'ru' ? ruContent : enContent;
+    const content = contentData.contact;
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -54,50 +61,30 @@ const Contact: React.FC = () => {
         }, 3000);
     };
 
-    const contactInfo = [
-        {
-            icon: <EnvelopeSimple size={32} color="#E7E7E7" />,
-            title: "Email",
-            value: "info@suppora.com",
-            description: "Напишите нам в любое время",
-        },
-        {
-            icon: <PhoneLogo size={32} color="#E7E7E7" />,
-            title: "Телефон",
-            value: "+7 (495) 123-45-67",
-            description: "Пн-Пт с 9:00 до 18:00",
-        },
-        // {
-        //   icon: "📍",
-        //   title: "Адрес",
-        //   value: "Москва, ул. Примерная, 123",
-        //   description: "Офис в центре города",
-        // },
-        {
-            icon: <TelegramLogo size={32} color="#E7E7E7" />,
-            title: "Telegram",
-            value: "@suppora_support",
-        },
-    ];
+    const contactInfo = content.methods.map((method, index) => {
+        const icons = [
+            <EnvelopeSimple size={32} color="#E7E7E7" />,
+            <PhoneLogo size={32} color="#E7E7E7" />,
+            <TelegramLogo size={32} color="#E7E7E7" />
+        ];
+        return {
+            ...method,
+            icon: icons[index],
+        };
+    });
 
     return (
         <section id="contact" className="contact">
             <div className="container">
                 <div className="section-title animate-fade-in-up">
-                    <h2>Свяжитесь с нами</h2>
-                    <p>
-                        Готовы начать сотрудничество? Оставьте заявку и мы свяжемся с вами в
-                        течение часа
-                    </p>
+                    <h2>{content.title}</h2>
+                    <p>{content.subtitle}</p>
                 </div>
 
                 <div className="contact-content">
                     <div className="contact-info animate-fade-in-left">
-                        <h3>Контактная информация</h3>
-                        <p>
-                            Мы всегда готовы ответить на ваши вопросы и обсудить возможности
-                            сотрудничества. Выберите удобный способ связи.
-                        </p>
+                        <h3>{content.info.title}</h3>
+                        <p>{content.info.description}</p>
 
                         <div className="contact-methods">
                             {contactInfo.map((info, index) => (
@@ -118,23 +105,21 @@ const Contact: React.FC = () => {
                     <div className="contact-form-container animate-fade-in-right">
                         <div className="contact-form-card">
                             <div className="form-header">
-                                <h3>Оставить заявку</h3>
-                                <p>Заполните форму и мы свяжемся с вами</p>
+                                <h3>{content.form.title}</h3>
+                                <p>{content.form.subtitle}</p>
                             </div>
 
                             {isSubmitted ? (
                                 <div className="form-success">
                                     <div className="success-icon">✓</div>
-                                    <h4>Заявка отправлена!</h4>
-                                    <p>
-                                        Спасибо за обращение. Мы свяжемся с вами в течение часа.
-                                    </p>
+                                    <h4>{content.form.success.title}</h4>
+                                    <p>{content.form.success.message}</p>
                                 </div>
                             ) : (
                                 <form onSubmit={handleSubmit} className="contact-form">
                                     <div className="form-row">
                                         <div className="form-group">
-                                            <label htmlFor="name">Имя *</label>
+                                            <label htmlFor="name">{content.form.name}</label>
                                             <input
                                                 type="text"
                                                 id="name"
@@ -142,11 +127,11 @@ const Contact: React.FC = () => {
                                                 value={formData.name}
                                                 onChange={handleInputChange}
                                                 required
-                                                placeholder="Ваше имя"
+                                                placeholder={content.form.namePlaceholder}
                                             />
                                         </div>
                                         <div className="form-group">
-                                            <label htmlFor="email">Email *</label>
+                                            <label htmlFor="email">{content.form.email}</label>
                                             <input
                                                 type="email"
                                                 id="email"
@@ -154,55 +139,38 @@ const Contact: React.FC = () => {
                                                 value={formData.email}
                                                 onChange={handleInputChange}
                                                 required
-                                                placeholder="your@email.com"
+                                                placeholder={content.form.emailPlaceholder}
                                             />
                                         </div>
                                     </div>
 
                                     <div className="form-row">
                                         <div className="form-group">
-                                            <label htmlFor="company">Компания</label>
+                                            <label htmlFor="company">{content.form.company}</label>
                                             <input
                                                 type="text"
                                                 id="company"
                                                 name="company"
                                                 value={formData.company}
                                                 onChange={handleInputChange}
-                                                placeholder="Название компании"
+                                                placeholder={content.form.companyPlaceholder}
                                             />
                                         </div>
                                         <div className="form-group">
-                                            <label htmlFor="phone">Телефон</label>
+                                            <label htmlFor="phone">{content.form.phone}</label>
                                             <input
                                                 type="tel"
                                                 id="phone"
                                                 name="phone"
                                                 value={formData.phone}
                                                 onChange={handleInputChange}
-                                                placeholder="+7 (999) 123-45-67"
+                                                placeholder={content.form.phonePlaceholder}
                                             />
                                         </div>
                                     </div>
 
-                                    {/* <div className="form-group">
-                    <label htmlFor="service">Интересующая услуга</label>
-                    <select
-                      id="service"
-                      name="service"
-                      value={formData.service}
-                      onChange={handleInputChange}
-                    >
-                      <option value="">Выберите услугу</option>
-                      {services.map((service, index) => (
-                        <option key={index} value={service}>
-                          {service}
-                        </option>
-                      ))}
-                    </select>
-                  </div> */}
-
                                     <div className="form-group">
-                                        <label htmlFor="message">Сообщение *</label>
+                                        <label htmlFor="message">{content.form.message}</label>
                                         <textarea
                                             id="message"
                                             name="message"
@@ -210,7 +178,7 @@ const Contact: React.FC = () => {
                                             onChange={handleInputChange}
                                             required
                                             rows={4}
-                                            placeholder="Расскажите о ваших потребностях..."
+                                            placeholder={content.form.messagePlaceholder}
                                         />
                                     </div>
 
@@ -219,7 +187,7 @@ const Contact: React.FC = () => {
                                         className="btn btn-primary form-submit"
                                         disabled={isSubmitting}
                                     >
-                                        {isSubmitting ? "Отправляем..." : "Отправить заявку"}
+                                        {isSubmitting ? content.form.submitting : content.form.submit}
                                     </button>
                                 </form>
                             )}
