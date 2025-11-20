@@ -63,9 +63,9 @@ const Contact: React.FC = () => {
 
     const contactInfo = content.methods.map((method, index) => {
         const icons = [
-            <EnvelopeSimple size={32} color="#E7E7E7" />,
-            <PhoneLogo size={32} color="#E7E7E7" />,
-            <TelegramLogo size={32} color="#E7E7E7" />
+            <EnvelopeSimple key="envelope" size={32} color="#E7E7E7" />,
+            <PhoneLogo key="phone" size={32} color="#E7E7E7" />,
+            <TelegramLogo key="telegram" size={32} color="#E7E7E7" />
         ];
         return {
             ...method,
