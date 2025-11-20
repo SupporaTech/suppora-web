@@ -1,6 +1,9 @@
 'use client';
 
 import React from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import ruContent from "@/data/ru/content.json";
+import enContent from "@/data/en/content.json";
 
 import {
     EnvelopeSimple,
@@ -12,27 +15,15 @@ import {
 import '@/styles/components/layout/footer.scss';
 
 const Footer: React.FC = () => {
+    const { language } = useLanguage();
+    const contentData = language === 'ru' ? ruContent : enContent;
+    const content = contentData.footer;
     const currentYear = new Date().getFullYear();
 
     const footerLinks = {
-        company: [
-            { name: "О компании", href: "#about" },
-            { name: "Услуги", href: "#services" },
-            { name: "Преимущества", href: "#advantages" },
-            { name: "Отзывы", href: "#testimonials" },
-        ],
-        services: [
-            { name: "Клиентская поддержка", href: "#" },
-            { name: "Обработка данных", href: "#" },
-            { name: "Финансовые услуги", href: "#" },
-            { name: "HR процессы", href: "#" },
-        ],
-        support: [
-            { name: "Контакты", href: "#contact" },
-            { name: "Техподдержка", href: "#" },
-            { name: "Документация", href: "#" },
-            { name: "FAQ", href: "#" },
-        ],
+        company: content.companyLinks,
+        services: content.serviceLinks,
+        support: content.supportLinks,
     };
 
     const socialLinks = [
@@ -75,8 +66,7 @@ const Footer: React.FC = () => {
                             <span className="logo-dot"></span>
                         </div>
                         <p className="footer-description">
-                            Ваш надежный партнер в сфере BPO-услуг. Оптимизируем
-                            бизнес-процессы для повышения эффективности и снижения затрат.
+                            {content.description}
                         </p>
                         <div className="footer-social">
                             {socialLinks.map((social, index) => (
@@ -94,7 +84,7 @@ const Footer: React.FC = () => {
 
                     <div className="footer-links">
                         <div className="link-group">
-                            <h4>Компания</h4>
+                            <h4>{content.links.company}</h4>
                             <ul>
                                 {footerLinks.company.map((link, index) => (
                                     <li key={index}>
@@ -113,7 +103,7 @@ const Footer: React.FC = () => {
                         </div>
 
                         <div className="link-group">
-                            <h4>Услуги</h4>
+                            <h4>{content.links.services}</h4>
                             <ul>
                                 {footerLinks.services.map((link, index) => (
                                     <li key={index}>
@@ -124,7 +114,7 @@ const Footer: React.FC = () => {
                         </div>
 
                         <div className="link-group">
-                            <h4>Поддержка</h4>
+                            <h4>{content.links.support}</h4>
                             <ul>
                                 {footerLinks.support.map((link, index) => (
                                     <li key={index}>
@@ -146,7 +136,7 @@ const Footer: React.FC = () => {
                     </div>
 
                     <div className="footer-contact">
-                        <h4>Контакты</h4>
+                        <h4>{content.contact.title}</h4>
                         <div className="contact-info">
                             <div className="contact-item">
                                 <span className="contact-icon">📧</span>
@@ -167,7 +157,7 @@ const Footer: React.FC = () => {
                                 className="btn btn-primary"
                                 onClick={() => scrollToSection("contact")}
                             >
-                                Консультация
+                                {content.contact.consultation}
                             </button>
                         </div>
                     </div>
@@ -176,12 +166,12 @@ const Footer: React.FC = () => {
                 <div className="footer-bottom">
                     <div className="footer-bottom-content">
                         <p className="copyright">
-                            © {currentYear} SUPPORA. Все права защищены.
+                            © {currentYear} SUPPORA. {content.copyright}
                         </p>
                         <div className="footer-legal">
-                            <a href="#">Политика конфиденциальности</a>
-                            <a href="#">Условия использования</a>
-                            <a href="#">Пользовательское соглашение</a>
+                            <a href="#">{content.legal.privacy}</a>
+                            <a href="#">{content.legal.terms}</a>
+                            <a href="#">{content.legal.agreement}</a>
                         </div>
                     </div>
                 </div>

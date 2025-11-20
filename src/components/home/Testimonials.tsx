@@ -2,53 +2,22 @@
 
 import React, { useState } from "react";
 import { ClockClockwiseLogo, LightingLogo, UsersLogo, StarLogo, UserLogo } from "@/components/icons";
+import { useLanguage } from "@/contexts/LanguageContext";
+import ruContent from '@/data/ru/content.json';
+import enContent from '@/data/en/content.json';
 
 import '@/styles/components/home/testimonials.scss';
 
 const Testimonials: React.FC = () => {
+    const { language } = useLanguage();
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
+    const contentData = language === 'ru' ? ruContent : enContent;
+    const { testimonials: testimonialsData } = contentData;
 
-    const testimonials = [
-        {
-            name: "Александр Петров",
-            position: "CEO, TechCorp",
-            company: "Технологическая компания",
-            avatar: <UserLogo size={48} color="#E7E7E7" />,
-            rating: 5,
-            text: "SUPPORA помогла нам снизить операционные расходы на 35% и значительно повысить качество клиентского сервиса. Профессиональная команда и отличные результаты.",
-            results: [
-                "-60% времени на HR",
-                "+40% эффективность",
-                "100% соответствие стандартам",
-            ],
-        },
-        {
-            name: "Мария Сидорова",
-            position: "Директор по развитию, RetailPlus",
-            company: "Розничная сеть",
-            avatar: <UserLogo size={48} color="#E7E7E7" />,
-            rating: 5,
-            text: "Благодаря аутсорсингу HR-процессов мы смогли сосредоточиться на стратегическом развитии. SUPPORA обеспечивает высокое качество и надежность.",
-            results: [
-                "-60% времени на HR",
-                "+40% эффективность",
-                "100% соответствие стандартам",
-            ],
-        },
-        {
-            name: "Дмитрий Козлов",
-            position: "Финансовый директор, FinanceGroup",
-            company: "Финансовая группа",
-            avatar: <UserLogo size={48} color="#E7E7E7" />,
-            rating: 5,
-            text: "Отличная работа с финансовыми процессами. Автоматизация и оптимизация помогли нам сократить время обработки документов в 3 раза.",
-            results: [
-                "-70% время обработки",
-                "+90% точность",
-                "Полная автоматизация",
-            ],
-        },
-    ];
+    const testimonials = testimonialsData.items.map((item) => ({
+        ...item,
+        avatar: <UserLogo size={48} color="#E7E7E7" />,
+    }));
 
     const nextTestimonial = () => {
         setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
@@ -64,10 +33,8 @@ const Testimonials: React.FC = () => {
         <section id="testimonials" className="testimonials">
             <div className="container">
                 <div className="section-title animate-fade-in-up">
-                    <h2>Отзывы наших клиентов</h2>
-                    <p>
-                        Более 500 компаний доверяют нам оптимизацию своих бизнес-процессов
-                    </p>
+                    <h2>{testimonialsData.title}</h2>
+                    <p>{testimonialsData.subtitle}</p>
                 </div>
 
                 <div className="testimonials-content">
@@ -102,7 +69,7 @@ const Testimonials: React.FC = () => {
                             <blockquote>&#34;{testimonials[currentTestimonial].text}&#34;</blockquote>
 
                             <div className="testimonial-results">
-                                <h4>Достигнутые результаты:</h4>
+                                <h4>{testimonialsData.resultsTitle}</h4>
                                 <div className="results-grid">
                                     {testimonials[currentTestimonial].results.map(
                                         (result, index) => (
@@ -121,7 +88,7 @@ const Testimonials: React.FC = () => {
                         <button
                             className="control-btn prev"
                             onClick={prevTestimonial}
-                            aria-label="Previous testimonial"
+                            aria-label={testimonialsData.ariaLabels.previous}
                         >
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                 <path
@@ -142,7 +109,7 @@ const Testimonials: React.FC = () => {
                                         index === currentTestimonial ? "active" : ""
                                     }`}
                                     onClick={() => setCurrentTestimonial(index)}
-                                    aria-label={`Go to testimonial ${index + 1}`}
+                                    aria-label={`${testimonialsData.ariaLabels.goTo} ${index + 1}`}
                                 />
                             ))}
                         </div>
@@ -150,7 +117,7 @@ const Testimonials: React.FC = () => {
                         <button
                             className="control-btn next"
                             onClick={nextTestimonial}
-                            aria-label="Next testimonial"
+                            aria-label={testimonialsData.ariaLabels.next}
                         >
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                 <path
@@ -167,34 +134,23 @@ const Testimonials: React.FC = () => {
 
                 <div className="testimonials-stats animate-fade-in-up">
                     <div className="stats-grid">
-                        <div className="stat-item">
-                            <div className="stat-icon"><StarLogo size={48} color="#6532ff" /></div>
-                            <div className="stat-content">
-                                <div className="stat-value">82%</div>
-                                <div className="stat-label">Оценка удовлетворенности</div>
-                            </div>
-                        </div>
-                        <div className="stat-item">
-                            <div className="stat-icon"><UsersLogo size={48} color="#6532ff"/></div>
-                            <div className="stat-content">
-                                <div className="stat-value">10+</div>
-                                <div className="stat-label">Довольных клиентов</div>
-                            </div>
-                        </div>
-                        <div className="stat-item">
-                            <div className="stat-icon"><ClockClockwiseLogo size={48} color="#6532ff" /></div>
-                            <div className="stat-content">
-                                <div className="stat-value">5 min</div>
-                                <div className="stat-label">Среднее время ответа</div>
-                            </div>
-                        </div>
-                        <div className="stat-item">
-                            <div className="stat-icon"><LightingLogo size={48} color="#6532ff" /></div>
-                            <div className="stat-content">
-                                <div className="stat-value">91%</div>
-                                <div className="stat-label">Соответсвие SLA</div>
-                            </div>
-                        </div>
+                        {testimonialsData.stats.map((stat, index) => {
+                            const icons = [
+                                <StarLogo size={48} color="#6532ff" />,
+                                <UsersLogo size={48} color="#6532ff" />,
+                                <ClockClockwiseLogo size={48} color="#6532ff" />,
+                                <LightingLogo size={48} color="#6532ff" />
+                            ];
+                            return (
+                                <div key={index} className="stat-item">
+                                    <div className="stat-icon">{icons[index]}</div>
+                                    <div className="stat-content">
+                                        <div className="stat-value">{stat.value}</div>
+                                        <div className="stat-label">{stat.label}</div>
+                                    </div>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
