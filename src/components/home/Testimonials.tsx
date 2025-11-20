@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from "react";
-import { ClockClockwiseLogo, LightingLogo, UsersLogo, StarLogo, UserLogo } from "@/components/icons";
+import { ClockClockwiseLogo, LightningLogo, UsersLogo, StarLogo, UserLogo } from "@/components/icons";
 
 import '@/styles/components/home/testimonials.scss';
 
@@ -189,7 +189,7 @@ const Testimonials: React.FC = () => {
                             </div>
                         </div>
                         <div className="stat-item">
-                            <div className="stat-icon"><LightingLogo size={48} color="#6532ff" /></div>
+                            <div className="stat-icon"><LightningLogo size={48} color="#6532ff" /></div>
                             <div className="stat-content">
                                 <div className="stat-value">91%</div>
                                 <div className="stat-label">Соответсвие SLA</div>

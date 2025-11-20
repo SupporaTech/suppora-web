@@ -1,7 +1,11 @@
 import React from "react";
 
 import '@/styles/components/home/advantages.scss';
-
+import { ShieldLogo } from "../icons/ShieldLogo";
+import { GraphLogo } from "../icons/GraphLogo";
+import { LightningLogo } from "../icons/LightningLogo";
+import { LockLogo } from "../icons/LockLogo";
+import { RocketLogo } from "../icons/RocketLogo";
 const Advantages: React.FC = () => {
     const advantages = [
         {
@@ -9,40 +13,40 @@ const Advantages: React.FC = () => {
             title: "Мультиязыковая поддержка (RU, UA, EN, ES...)",
             description:
                 "Экономия до 30% операционных расходов за счет оптимизации процессов",
-            icon: "💰",
+            icon: <ShieldLogo size={48} color="#fff" />,
         },
         {
             number: "02",
             title: "Удаленные масштабируемые команды (1–10+ агентов)",
             description:
                 "Увеличение производительности на 40% благодаря автоматизации",
-            icon: "⚡",
+            icon: <LightningLogo size={48} color="#fff" />,
         },
         {
             number: "03",
             title: "Скорость запуска (3–5 дней)",
             description: "Гибкие решения, которые растут вместе с вашим бизнесом",
-            icon: "📈",
+            icon: <GraphLogo size={48} color="#fff" />,
         },
         {
             number: "04",
             title: "Техническая экспертиза (API, журналы, SQL)",
             description: "Круглосуточная техническая поддержка и мониторинг",
-            icon: "🛡️",
+            icon: <ShieldLogo size={48} color="#fff" />,
         },
         {
             number: "05",
             title: "Гибкость и безопасность (GDPR, доступ к VPN, отчеты)",
             description:
                 "Соблюдение всех стандартов безопасности и защиты информации",
-            icon: "🔒",
+            icon: <LockLogo size={48} color="#fff" />,
         },
         {
             number: "06",
             title: "Человекоцентричная культура",
             description:
                 "Запуск проектов в течение 2-4 недель с минимальными рисками",
-            icon: "🚀",
+            icon: <RocketLogo size={48} color="#fff" />,
         },
     ];
 
