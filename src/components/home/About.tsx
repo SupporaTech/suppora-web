@@ -86,15 +86,19 @@ const About: React.FC = () => {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
 
-                        <div className="values">
-                            <h4>{about.values.title}</h4>
-                            <ul>
-                                {about.values.items.map((item, index) => (
-                                    <li key={index}>{item}</li>
-                                ))}
-                            </ul>
-                        </div>
+            <div className="values-wrapper">
+                <div className="values animate-fade-in-up">
+                    <div className="values-content">
+                        <h4>{about.values.title}</h4>
+                        <ul>
+                            {about.values.items.map((item, index) => (
+                                <li key={index}>{item}</li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
             </div>

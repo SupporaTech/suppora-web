@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
                         </p>
                         <div className="hero-stats">
                             <div className="stat">
-                                <span className="stat-number">500+</span>
+                                <span className="stat-number">20+</span>
                                 <span className="stat-label">{content.stats.clients}</span>
                             </div>
                             <div className="stat">
@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
                                 <span className="stat-label">{content.stats.experience}</span>
                             </div>
                             <div className="stat">
-                                <span className="stat-number">30%</span>
+                                <span className="stat-number">40%</span>
                                 <span className="stat-label">{content.stats.savings}</span>
                             </div>
                         </div>
@@ -94,15 +94,15 @@ const Hero: React.FC = () => {
                             <div className="card-content">
                                 <div className="metric">
                                     <span className="metric-label">{content.dashboard.efficiency}</span>
-                                    <span className="metric-value">+45%</span>
+                                    <span className="metric-value">+75%</span>
                                 </div>
                                 <div className="metric">
                                     <span className="metric-label">{content.dashboard.savings}</span>
-                                    <span className="metric-value">$2.5M</span>
+                                    <span className="metric-value">83%</span>
                                 </div>
                                 <div className="metric">
                                     <span className="metric-label">{content.dashboard.processingTime}</span>
-                                    <span className="metric-value">-60%</span>
+                                    <span className="metric-value">-65%</span>
                                 </div>
                                 <div className="progress-bar">
                                     <div className="progress-fill"></div>
