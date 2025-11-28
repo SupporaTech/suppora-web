@@ -136,10 +136,10 @@ const Testimonials: React.FC = () => {
                     <div className="stats-grid">
                         {testimonialsData.stats.map((stat, index) => {
                             const icons = [
-                                <StarLogo size={48} color="#6532ff" />,
-                                <UsersLogo size={48} color="#6532ff" />,
-                                <ClockClockwiseLogo size={48} color="#6532ff" />,
-                                <LightingLogo size={48} color="#6532ff" />
+                                <StarLogo key="star" size={48} color="#6532ff" />,
+                                <UsersLogo key="users" size={48} color="#6532ff" />,
+                                <ClockClockwiseLogo key="clock" size={48} color="#6532ff" />,
+                                <LightingLogo key="lighting" size={48} color="#6532ff" />
                             ];
                             return (
                                 <div key={index} className="stat-item">
