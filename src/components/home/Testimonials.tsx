@@ -139,7 +139,8 @@ const Testimonials: React.FC = () => {
                                 <StarLogo key="star" size={48} color="#6532ff" />,
                                 <UsersLogo key="users" size={48} color="#6532ff" />,
                                 <ClockClockwiseLogo key="clock" size={48} color="#6532ff" />,
-                                <LightingLogo key="lightning" size={48} color="#6532ff" />
+                                <LightingLogo key="lighting" size={48} color="#6532ff" />
+
                             ];
                             return (
                                 <div key={index} className="stat-item">
