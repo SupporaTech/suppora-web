@@ -6,6 +6,13 @@ import ruContent from "@/data/ru/content.json";
 import enContent from "@/data/en/content.json";
 
 import '@/styles/components/home/services.scss';
+import { PhoneLogo, ChartBarLogo } from "@/components/icons";
+
+// Маппинг иконок
+const iconMap: Record<string, React.ComponentType<{ color: string; size: number }>> = {
+    '📞': PhoneLogo,
+    '📊': ChartBarLogo,
+};
 
 const Services: React.FC = () => {
     const { language } = useLanguage();
@@ -22,15 +29,21 @@ const Services: React.FC = () => {
                 </div>
 
                 <div className="services-grid">
-                    {services.map((service, index) => (
-                        <div
-                            key={index}
-                            className={`service-card animate-fade-in-up`}
-                            style={{ animationDelay: `${index * 0.1}s` }}
-                        >
-                            <div className="service-icon">
-                                <span className="icon-emoji">{service.icon}</span>
-                            </div>
+                    {services.map((service, index) => {
+                        const IconComponent = iconMap[service.icon];
+                        return (
+                            <div
+                                key={index}
+                                className={`service-card animate-fade-in-up`}
+                                style={{ animationDelay: `${index * 0.1}s` }}
+                            >
+                                <div className="service-icon">
+                                    {IconComponent ? (
+                                        <IconComponent color="currentColor" size={48} />
+                                    ) : (
+                                        <span className="icon-emoji">{service.icon}</span>
+                                    )}
+                                </div>
                             <div className="service-content">
                                 <h3>{service.title}</h3>
                                 <p>{service.description}</p>
@@ -44,7 +57,8 @@ const Services: React.FC = () => {
                                 <button className="btn btn-secondary">{content.button}</button>
                             </div>
                         </div>
-                    ))}
+                        );
+                    })}
                 </div>
 
                 <div className="services-cta animate-fade-in-up">

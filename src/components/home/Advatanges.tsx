@@ -6,6 +6,17 @@ import ruContent from '@/data/ru/content.json';
 import enContent from '@/data/en/content.json';
 
 import '@/styles/components/home/advantages.scss';
+import { ShieldLogo, GraphLogo, LightningLogo, LockLogo, RocketLogo } from "@/components/icons";
+
+// Маппинг иконок
+const iconMap: Record<string, React.ComponentType<{ color: string; size: number }>> = {
+    '⚡': LightningLogo,
+    '📈': GraphLogo,
+    '🛡️': ShieldLogo,
+    '🔒': LockLogo,
+    '🚀': RocketLogo,
+    '💰': ShieldLogo,
+};
 
 const Advantages: React.FC = () => {
     const { language } = useLanguage();
@@ -24,22 +35,29 @@ const Advantages: React.FC = () => {
 
                 <div className="advantages-content">
                     <div className="advantages-grid">
-                        {advantages.map((advantage, index) => (
-                            <div
-                                key={index}
-                                className={`advantage-card animate-fade-in-up`}
-                                style={{ animationDelay: `${index * 0.1}s` }}
-                            >
-                                <div className="advantage-number">{advantage.number}</div>
-                                <div className="advantage-icon">
-                                    <span className="icon-emoji">{advantage.icon}</span>
+                        {advantages.map((advantage, index) => {
+                            const IconComponent = iconMap[advantage.icon];
+                            return (
+                                <div
+                                    key={index}
+                                    className={`advantage-card animate-fade-in-up`}
+                                    style={{ animationDelay: `${index * 0.1}s` }}
+                                >
+                                    <div className="advantage-number">{advantage.number}</div>
+                                    <div className="advantage-icon">
+                                        {IconComponent ? (
+                                            <IconComponent color="currentColor" size={48} />
+                                        ) : (
+                                            <span className="icon-emoji">{advantage.icon}</span>
+                                        )}
+                                    </div>
+                                    <div className="advantage-content">
+                                        <h3>{advantage.title}</h3>
+                                        <p>{advantage.description}</p>
+                                    </div>
                                 </div>
-                                <div className="advantage-content">
-                                    <h3>{advantage.title}</h3>
-                                    <p>{advantage.description}</p>
-                                </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
 
                     <div className="advantages-stats animate-fade-in-up">

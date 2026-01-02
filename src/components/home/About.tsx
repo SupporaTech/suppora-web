@@ -6,6 +6,7 @@ import ruContent from '@/data/ru/content.json';
 import enContent from '@/data/en/content.json';
 
 import '@/styles/components/home/about.scss';
+import { CheckCircleLogo, LightningLogo, StarLogo } from "@/components/icons";
 
 const About: React.FC = () => {
     const { language } = useLanguage();

@@ -5,7 +5,7 @@ type Props = {
     size: number;
 }
 
-export const LightingLogo = ({color = "#000", size = 32}: Props) => {
+export const LightningLogo = ({color = "#000", size = 32}: Props) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill={color} viewBox="0 0 256 256">
             <path

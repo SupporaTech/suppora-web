@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from "react";
-import { EnvelopeSimple, PhoneLogo, TelegramLogo } from "@/components/icons";
+import { EnvelopeSimple, PhoneLogo, TelegramLogo, CheckCircleLogo } from "@/components/icons";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ruContent from "@/data/ru/content.json";
 import enContent from "@/data/en/content.json";
@@ -90,7 +90,7 @@ const Contact: React.FC = () => {
                             {contactInfo.map((info, index) => (
                                 <div key={index} className="contact-method">
                                     <div className="method-icon">
-                                        <span className="icon-emoji">{info.icon}</span>
+                                        {info.icon}
                                     </div>
                                     <div className="method-content">
                                         <h4>{info.title}</h4>
@@ -111,7 +111,9 @@ const Contact: React.FC = () => {
 
                             {isSubmitted ? (
                                 <div className="form-success">
-                                    <div className="success-icon">✓</div>
+                                    <div className="success-icon">
+                                        <CheckCircleLogo size={48} color="currentColor" />
+                                    </div>
                                     <h4>{content.form.success.title}</h4>
                                     <p>{content.form.success.message}</p>
                                 </div>
