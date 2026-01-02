@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from "react";
-import { ClockClockwiseLogo, LightingLogo, UsersLogo, StarLogo, UserLogo } from "@/components/icons";
+import { ClockClockwiseLogo, LightingLogo, UsersLogo, StarLogo, UserLogo, LightningLogo } from "@/components/icons";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ruContent from '@/data/ru/content.json';
 import enContent from '@/data/en/content.json';
@@ -139,7 +139,7 @@ const Testimonials: React.FC = () => {
                                 <StarLogo key="star" size={48} color="#6532ff" />,
                                 <UsersLogo key="users" size={48} color="#6532ff" />,
                                 <ClockClockwiseLogo key="clock" size={48} color="#6532ff" />,
-                                <LightingLogo key="lighting" size={48} color="#6532ff" />
+                                <LightningLogo key="lighting" size={48} color="#6532ff" />
 
                             ];
                             return (
