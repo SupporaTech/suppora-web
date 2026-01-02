@@ -1,10 +1,17 @@
 'use client';
 
 import React from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import ruContent from "@/data/ru/content.json";
+import enContent from "@/data/en/content.json";
 
 import '@/styles/components/home/hero.scss';
 
 const Hero: React.FC = () => {
+    const { language } = useLanguage();
+    const contentData = language === 'ru' ? ruContent : enContent;
+    const content = contentData.hero;
+
     const scrollToContact = () => {
         const element = document.getElementById("contact");
         if (element) {
@@ -46,32 +53,31 @@ const Hero: React.FC = () => {
                 <div className="hero-content">
                     <div className="hero-text animate-fade-in-left">
                         <h1 className="hero-title">
-                            Оптимизируйте бизнес-процессы с{" "}
+                            {content.title}{" "}
                             <span className="gradient-text">SUPPORA</span>
                         </h1>
                         <p className="hero-subtitle">
-                            Профессиональные BPO-решения для повышения эффективности вашего
-                            бизнеса. Снижаем операционные расходы до 30% и ускоряем развитие.
+                            {content.subtitle}
                         </p>
                         <div className="hero-stats">
                             <div className="stat">
-                                <span className="stat-number">500+</span>
-                                <span className="stat-label">Довольных клиентов</span>
+                                <span className="stat-number">20+</span>
+                                <span className="stat-label">{content.stats.clients}</span>
                             </div>
                             <div className="stat">
                                 <span className="stat-number">5+</span>
-                                <span className="stat-label">Лет опыта</span>
+                                <span className="stat-label">{content.stats.experience}</span>
                             </div>
                             <div className="stat">
-                                <span className="stat-number">30%</span>
-                                <span className="stat-label">Экономия затрат</span>
+                                <span className="stat-number">40%</span>
+                                <span className="stat-label">{content.stats.savings}</span>
                             </div>
                         </div>
                         <div className="hero-actions">
                             <button className="btn btn-primary" onClick={scrollToContact}>
-                                Получить консультацию
+                                {content.buttons.consultation}
                             </button>
-                            <button className="btn btn-secondary">Скачать презентацию</button>
+                            <button className="btn btn-secondary">{content.buttons.presentation}</button>
                         </div>
                     </div>
 
@@ -83,20 +89,20 @@ const Hero: React.FC = () => {
                                     <span></span>
                                     <span></span>
                                 </div>
-                                <h3>SUPPORA Dashboard</h3>
+                                <h3>{content.dashboard.title}</h3>
                             </div>
                             <div className="card-content">
                                 <div className="metric">
-                                    <span className="metric-label">Эффективность</span>
-                                    <span className="metric-value">+45%</span>
+                                    <span className="metric-label">{content.dashboard.efficiency}</span>
+                                    <span className="metric-value">+75%</span>
                                 </div>
                                 <div className="metric">
-                                    <span className="metric-label">Экономия</span>
-                                    <span className="metric-value">$2.5M</span>
+                                    <span className="metric-label">{content.dashboard.savings}</span>
+                                    <span className="metric-value">83%</span>
                                 </div>
                                 <div className="metric">
-                                    <span className="metric-label">Время обработки</span>
-                                    <span className="metric-value">-60%</span>
+                                    <span className="metric-label">{content.dashboard.processingTime}</span>
+                                    <span className="metric-value">-65%</span>
                                 </div>
                                 <div className="progress-bar">
                                     <div className="progress-fill"></div>

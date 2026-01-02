@@ -1,4 +1,9 @@
+'use client';
+
 import React from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import ruContent from '@/data/ru/content.json';
+import enContent from '@/data/en/content.json';
 
 import '@/styles/components/home/advantages.scss';
 import { ShieldLogo } from "../icons/ShieldLogo";
@@ -7,65 +12,18 @@ import { LightningLogo } from "../icons/LightningLogo";
 import { LockLogo } from "../icons/LockLogo";
 import { RocketLogo } from "../icons/RocketLogo";
 const Advantages: React.FC = () => {
-    const advantages = [
-        {
-            number: "01",
-            title: "Мультиязыковая поддержка (RU, UA, EN, ES...)",
-            description:
-                "Экономия до 30% операционных расходов за счет оптимизации процессов",
-            icon: <ShieldLogo size={48} color="#fff" />,
-        },
-        {
-            number: "02",
-            title: "Удаленные масштабируемые команды (1–10+ агентов)",
-            description:
-                "Увеличение производительности на 40% благодаря автоматизации",
-            icon: <LightningLogo size={48} color="#fff" />,
-        },
-        {
-            number: "03",
-            title: "Скорость запуска (3–5 дней)",
-            description: "Гибкие решения, которые растут вместе с вашим бизнесом",
-            icon: <GraphLogo size={48} color="#fff" />,
-        },
-        {
-            number: "04",
-            title: "Техническая экспертиза (API, журналы, SQL)",
-            description: "Круглосуточная техническая поддержка и мониторинг",
-            icon: <ShieldLogo size={48} color="#fff" />,
-        },
-        {
-            number: "05",
-            title: "Гибкость и безопасность (GDPR, доступ к VPN, отчеты)",
-            description:
-                "Соблюдение всех стандартов безопасности и защиты информации",
-            icon: <LockLogo size={48} color="#fff" />,
-        },
-        {
-            number: "06",
-            title: "Человекоцентричная культура",
-            description:
-                "Запуск проектов в течение 2-4 недель с минимальными рисками",
-            icon: <RocketLogo size={48} color="#fff" />,
-        },
-    ];
-
-    const stats = [
-        { value: "500+", label: "Довольных клиентов" },
-        { value: "30%", label: "Средняя экономия" },
-        { value: "99.9%", label: "Uptime сервисов" },
-        // { value: "24/7", label: "Поддержка" },
-    ];
+    const { language } = useLanguage();
+    const contentData = language === 'ru' ? ruContent : enContent;
+    const { advantages: advantagesData } = contentData;
+    const advantages = advantagesData.items;
+    const stats = advantagesData.stats;
 
     return (
         <section id="advantages" className="advantages">
             <div className="container">
                 <div className="section-title animate-fade-in-up">
-                    <h2>Почему выбирают SUPPORA</h2>
-                    <p>
-                        Мы предоставляем комплексные решения, которые помогают компаниям
-                        достигать новых высот в эффективности
-                    </p>
+                    <h2>{advantagesData.title}</h2>
+                    <p>{advantagesData.subtitle}</p>
                 </div>
 
                 <div className="advantages-content">
@@ -103,25 +61,22 @@ const Advantages: React.FC = () => {
                 <div className="advantages-cta animate-fade-in-up">
                     <div className="cta-card">
                         <div className="cta-content">
-                            <h3>Готовы начать экономить?</h3>
-                            <p>
-                                Получите бесплатную консультацию и узнайте, сколько вы можете
-                                сэкономить
-                            </p>
+                            <h3>{advantagesData.cta.title}</h3>
+                            <p>{advantagesData.cta.description}</p>
                             <div className="cta-actions">
                                 <button className="btn btn-primary">
-                                    Получить консультацию
+                                    {advantagesData.cta.primaryButton}
                                 </button>
-                                <button className="btn btn-secondary">Скачать кейсы</button>
+                                <button className="btn btn-secondary">{advantagesData.cta.secondaryButton}</button>
                             </div>
                         </div>
                         <div className="cta-visual">
                             <div className="chart-container">
                                 <div className="chart-bar" style={{ height: "60%" }}>
-                                    <span className="chart-label">До</span>
+                                    <span className="chart-label">{advantagesData.cta.chartLabels.before}</span>
                                 </div>
                                 <div className="chart-bar active" style={{ height: "40%" }}>
-                                    <span className="chart-label">После</span>
+                                    <span className="chart-label">{advantagesData.cta.chartLabels.after}</span>
                                 </div>
                             </div>
                         </div>

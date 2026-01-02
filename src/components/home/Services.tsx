@@ -1,69 +1,25 @@
+'use client';
+
 import React from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import ruContent from "@/data/ru/content.json";
+import enContent from "@/data/en/content.json";
 
 import '@/styles/components/home/services.scss';
 import { PhoneLogo, ChartBarLogo } from "@/components/icons";
 
 const Services: React.FC = () => {
-    const services = [
-        {
-            icon: <PhoneLogo size={48} color="#E7E7E7" />,
-            title: "Техническая поддержка L1",
-            description: "Профессиональная поддержка клиентов на любом языке",
-            features: [
-                "Мультиканальная поддержка (Email, чаты, звонки)",
-                "Мониторинг & Alert реагирование",
-                "Клиенториентированность"
-            ],
-        },
-        {
-            icon: <ChartBarLogo size={48} color="#E7E7E7" />,
-            title: "Техническая поддержка L1 и L2",
-            description: "Профессиональная поддержка клиентов на любом языке",
-            features: [
-                "Мультиканальная поддержка (Email, чаты, звонки)",
-                "Мониторинг & Alert реагирование",
-                "Клиенториентированность",
-            ],
-        },
-        // {
-        //   icon: "💰",
-        //   title: "Финансовые услуги",
-        //   description: "Аутсорсинг бухгалтерских и финансовых операций",
-        //   features: [
-        //     "Ведение учета",
-        //     "Финансовая отчетность",
-        //     "Налоговое планирование",
-        //   ],
-        // },
-        // {
-        //   icon: "📝",
-        //   title: "HR процессы",
-        //   description: "Полный цикл управления человеческими ресурсами",
-        //   features: ["Подбор персонала", "Обработка документов", "Расчет зарплат"],
-        // },
-        // {
-        //   icon: "🛒",
-        //   title: "E-commerce поддержка",
-        //   description: "Комплексная поддержка интернет-магазинов и платформ",
-        //   features: ["Обработка заказов", "Управление складом", "Логистика"],
-        // },
-        // {
-        //   icon: "🔧",
-        //   title: "IT аутсорсинг",
-        //   description: "Техническая поддержка и разработка IT-решений",
-        //   features: ["Техподдержка", "Разработка ПО", "Облачные решения"],
-        // },
-    ];
+    const { language } = useLanguage();
+    const contentData = language === 'ru' ? ruContent : enContent;
+    const content = contentData.services;
+    const services = content.items;
 
     return (
         <section id="services" className="services">
             <div className="container">
                 <div className="section-title animate-fade-in-up">
-                    <h2>Наши услуги</h2>
-                    <p>
-                        Полный спектр BPO-услуг для оптимизации вашего бизнеса и повышения
-                        эффективности работы
-                    </p>
+                    <h2>{content.title}</h2>
+                    <p>{content.subtitle}</p>
                 </div>
 
                 <div className="services-grid">
@@ -86,7 +42,7 @@ const Services: React.FC = () => {
                                 </ul>
                             </div>
                             <div className="service-footer">
-                                <button className="btn btn-secondary">Подробнее</button>
+                                <button className="btn btn-secondary">{content.button}</button>
                             </div>
                         </div>
                     ))}
@@ -94,12 +50,9 @@ const Services: React.FC = () => {
 
                 <div className="services-cta animate-fade-in-up">
                     <div className="cta-content">
-                        <h3>Нужна индивидуальная консультация?</h3>
-                        <p>
-                            Наши эксперты помогут подобрать оптимальное решение для вашего
-                            бизнеса
-                        </p>
-                        <button className="btn btn-primary">Заказать консультацию</button>
+                        <h3>{content.cta.title}</h3>
+                        <p>{content.cta.description}</p>
+                        <button className="btn btn-primary">{content.cta.button}</button>
                     </div>
                 </div>
             </div>

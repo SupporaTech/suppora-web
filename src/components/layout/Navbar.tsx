@@ -1,12 +1,20 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import ruContent from "@/data/ru/content.json";
+import enContent from "@/data/en/content.json";
 
 import '@/styles/components/layout/navbar.scss';
 
 const Header: React.FC = () => {
+    const { language, setLanguage } = useLanguage();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
+
+    const contentData = language === 'ru' ? ruContent : enContent;
+    const content = contentData.nav;
 
     useEffect(() => {
         const handleScroll = () => {
@@ -16,6 +24,23 @@ const Header: React.FC = () => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            const target = event.target as HTMLElement;
+            if (!target.closest('.language-selector')) {
+                setIsLanguageMenuOpen(false);
+            }
+        };
+
+        if (isLanguageMenuOpen) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isLanguageMenuOpen]);
 
     const scrollToSection = (sectionId: string) => {
         const element = document.getElementById(sectionId);
@@ -38,17 +63,17 @@ const Header: React.FC = () => {
                         <ul className="nav-list">
                             <li>
                                 <a href="#home" onClick={() => scrollToSection("home")}>
-                                    Главная
+                                    {content.home}
                                 </a>
                             </li>
                             <li>
                                 <a href="#about" onClick={() => scrollToSection("about")}>
-                                    О нас
+                                    {content.about}
                                 </a>
                             </li>
                             <li>
                                 <a href="#services" onClick={() => scrollToSection("services")}>
-                                    Услуги
+                                    {content.services}
                                 </a>
                             </li>
                             <li>
@@ -56,7 +81,7 @@ const Header: React.FC = () => {
                                     href="#advantages"
                                     onClick={() => scrollToSection("advantages")}
                                 >
-                                    Преимущества
+                                    {content.advantages}
                                 </a>
                             </li>
                             <li>
@@ -64,23 +89,63 @@ const Header: React.FC = () => {
                                     href="#testimonials"
                                     onClick={() => scrollToSection("testimonials")}
                                 >
-                                    Отзывы
+                                    {content.testimonials}
                                 </a>
                             </li>
                             <li>
                                 <a href="#contact" onClick={() => scrollToSection("contact")}>
-                                    Контакты
+                                    {content.contact}
                                 </a>
                             </li>
                         </ul>
                     </nav>
 
                     <div className="header-actions">
+                        <div className="language-selector">
+                            <button
+                                className="language-toggle"
+                                onClick={() => setIsLanguageMenuOpen(!isLanguageMenuOpen)}
+                                aria-label="Select language"
+                            >
+                                {language.toUpperCase()}
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M6 9L12 15L18 9"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    />
+                                </svg>
+                            </button>
+                            {isLanguageMenuOpen && (
+                                <div className="language-menu">
+                                    <button
+                                        className={`language-option ${language === 'ru' ? 'active' : ''}`}
+                                        onClick={() => {
+                                            setLanguage('ru');
+                                            setIsLanguageMenuOpen(false);
+                                        }}
+                                    >
+                                        RU
+                                    </button>
+                                    <button
+                                        className={`language-option ${language === 'en' ? 'active' : ''}`}
+                                        onClick={() => {
+                                            setLanguage('en');
+                                            setIsLanguageMenuOpen(false);
+                                        }}
+                                    >
+                                        EN
+                                    </button>
+                                </div>
+                            )}
+                        </div>
                         <button
                             className="btn btn-primary"
                             onClick={() => scrollToSection("contact")}
                         >
-                            Консультация
+                            {content.consultation}
                         </button>
 
                         <button
