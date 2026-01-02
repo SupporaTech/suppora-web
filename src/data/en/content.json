@@ -9,68 +9,68 @@
     "consultation": "Consultation"
   },
   "hero": {
-    "title": "Optimize business processes with",
-    "subtitle": "Professional BPO solutions to improve your business efficiency. Reduce operational costs by up to 30% and accelerate growth.",
+    "title": "Optimize your business operations with",
+    "subtitle": "We provide professional two-tier technical support, serving clients in the USA and Europe in multiple languages. Our team's strong technical expertise helps reduce operational costs and accelerate your project's growth, while ensuring a personalized and multilingual approach to each client.",
     "stats": {
-      "clients": "Satisfied clients",
-      "experience": "Years of experience",
-      "savings": "Cost savings"
+      "clients": "Satisfied Clients",
+      "experience": "Years of Experience",
+      "savings": "Cost Savings"
     },
     "buttons": {
-      "consultation": "Get consultation",
-      "presentation": "Download presentation"
+      "consultation": "Get Consultation",
+      "presentation": "Download Presentation"
     },
     "dashboard": {
       "title": "SUPPORA Dashboard",
-      "efficiency": "Efficiency",
-      "savings": "Savings",
-      "processingTime": "Processing time"
+      "efficiency": "Increase support efficiency by",
+      "savings": "Customer Satisfaction",
+      "processingTime": "Request processing time reduced by"
     }
   },
   "about": {
     "title": "About SUPPORA",
-    "subtitle": "We are a team of professionals specializing in business process optimization and outsourcing for companies of any scale",
+    "subtitle": "SUPPORA is a team of experts specializing in providing multilingual technical solutions and two-tier support for SaaS, fintech projects and services. Our goal: to improve the efficiency and quality of customer service by optimizing business processes and reducing the workload on internal teams.",
     "features": [
       {
         "title": "Reliability",
-        "description": "We guarantee high quality services and compliance with all contractual obligations"
+        "description": "We guarantee flawless execution of commitments and high standards of service"
       },
       {
         "title": "Speed",
-        "description": "Rapid implementation of solutions and adaptation to your business needs"
+        "description": "Rapid implementation of solutions and flexible adaptation to your business's unique needs"
       },
       {
         "title": "Quality",
-        "description": "We use modern technologies and best practices in BPO"
+        "description": "We use cutting-edge technologies and industry best practices to ensure exceptional service levels"
       }
     ],
     "mission": {
       "title": "Our Mission",
-      "description": "We help companies achieve maximum efficiency through business process optimization and professional outsourcing.",
+      "description": "We help SaaS and fintech projects achieve maximum efficiency through professional two-tier technical support and business process optimization.",
       "stats": [
         {
-          "number": "500+",
-          "label": "Projects"
+          "number": "20+",
+          "label": "successfully completed projects"
         },
         {
-          "number": "50+",
-          "label": "Specialists"
+          "number": "10+",
+          "label": "specialists with deep technical expertise and multilingual skills"
         }
       ]
     },
     "values": {
       "title": "Our Values",
       "items": [
-        "Transparency in work",
-        "Individual approach",
-        "Continuous development",
-        "Customer focus"
+        "Transparency: openness and honesty in every step of our collaboration",
+        "Individual approach: solutions tailored to each client's unique needs",
+        "Continuous development: constant improvement of processes and technologies for your success",
+        "Customer focus: focus on maximum satisfaction and support of our partners"
       ]
     }
   },
   "services": {
     "title": "Our Services",
-    "subtitle": "Full range of BPO services to optimize your business and improve operational efficiency",
+    "subtitle": "Our full range of services includes two-tier technical support, SaaS and fintech project management, multilingual service, as well as solution adaptation to your business's unique needs.",
     "items": [
       {
         "icon": "📞",
@@ -79,7 +79,7 @@
         "features": [
           "Multi-channel support (Email, chats, calls)",
           "Monitoring & Alert response",
-          "Customer orientation"
+          "Customer-centric approach"
         ]
       },
       {
@@ -89,15 +89,15 @@
         "features": [
           "Multi-channel support (Email, chats, calls)",
           "Monitoring & Alert response",
-          "Customer orientation"
+          "Customer-centric approach"
         ]
       }
     ],
-    "button": "Learn more",
+    "button": "Learn More",
     "cta": {
-      "title": "Need a custom consultation?",
+      "title": "Need a personalized consultation?",
       "description": "Our experts will help you find the optimal solution for your business",
-      "button": "Order consultation"
+      "button": "Request Consultation"
     }
   },
   "advantages": {
@@ -106,37 +106,37 @@
     "items": [
       {
         "number": "01",
-        "title": "Multilingual support (RU, UA, EN, ES...)",
+        "title": "Multilingual Support (RU, UA, EN, ES...)",
         "description": "Save up to 30% on operational costs through process optimization",
         "icon": "💰"
       },
       {
         "number": "02",
-        "title": "Remote scalable teams (1–10+ agents)",
-        "description": "Increase productivity by 40% through automation",
+        "title": "Remote Scalable Teams (1–10+ agents)",
+        "description": "40% productivity increase through automation",
         "icon": "⚡"
       },
       {
         "number": "03",
-        "title": "Fast launch (3–5 days)",
+        "title": "Fast Launch (3–5 days)",
         "description": "Flexible solutions that grow with your business",
         "icon": "📈"
       },
       {
         "number": "04",
-        "title": "Technical expertise (API, logs, SQL)",
+        "title": "Technical Expertise (API, logs, SQL)",
         "description": "24/7 technical support and monitoring",
         "icon": "🛡️"
       },
       {
         "number": "05",
-        "title": "Flexibility and security (GDPR, VPN access, reports)",
+        "title": "Flexibility and Security (GDPR, VPN access, reports)",
         "description": "Compliance with all security and data protection standards",
         "icon": "🔒"
       },
       {
         "number": "06",
-        "title": "Human-centered culture",
+        "title": "Human-centered Culture",
         "description": "Project launch within 2-4 weeks with minimal risks",
         "icon": "🚀"
       }
@@ -144,22 +144,22 @@
     "stats": [
       {
         "value": "500+",
-        "label": "Satisfied clients"
+        "label": "Satisfied Clients"
       },
       {
         "value": "30%",
-        "label": "Average savings"
+        "label": "Average Savings"
       },
       {
         "value": "99.9%",
-        "label": "Service uptime"
+        "label": "Service Uptime"
       }
     ],
     "cta": {
-      "title": "Ready to start saving?",
-      "description": "Get a free consultation and find out how much you can save",
-      "primaryButton": "Get consultation",
-      "secondaryButton": "Download cases",
+      "title": "Ready to improve your business efficiency?",
+      "description": "Get a free consultation and learn how SUPPORA can optimize your processes and help your project/clients.",
+      "primaryButton": "Get Consultation",
+      "secondaryButton": "Download Case Studies",
       "chartLabels": {
         "before": "Before",
         "after": "After"
@@ -168,12 +168,12 @@
   },
   "testimonials": {
     "title": "Client Testimonials",
-    "subtitle": "Over 500 companies trust us with their business process optimization",
+    "subtitle": "Over 500 companies trust us with optimizing their business processes",
     "items": [
       {
         "name": "Alexander Petrov",
         "position": "CEO, TechCorp",
-        "company": "Technology company",
+        "company": "Technology Company",
         "rating": 5,
         "text": "SUPPORA helped us reduce operational costs by 35% and significantly improve customer service quality. Professional team and excellent results.",
         "results": [
@@ -185,7 +185,7 @@
       {
         "name": "Maria Sidorova",
         "position": "Development Director, RetailPlus",
-        "company": "Retail chain",
+        "company": "Retail Chain",
         "rating": 5,
         "text": "Thanks to HR process outsourcing, we were able to focus on strategic development. SUPPORA ensures high quality and reliability.",
         "results": [
@@ -197,7 +197,7 @@
       {
         "name": "Dmitry Kozlov",
         "position": "CFO, FinanceGroup",
-        "company": "Financial group",
+        "company": "Financial Group",
         "rating": 5,
         "text": "Excellent work with financial processes. Automation and optimization helped us reduce document processing time by 3 times.",
         "results": [
@@ -207,23 +207,23 @@
         ]
       }
     ],
-    "resultsTitle": "Achieved results:",
+    "resultsTitle": "Achieved Results:",
     "stats": [
       {
         "value": "82%",
-        "label": "Satisfaction rating"
+        "label": "Satisfaction Rating"
       },
       {
         "value": "10+",
-        "label": "Satisfied clients"
+        "label": "Satisfied Clients"
       },
       {
         "value": "5 min",
-        "label": "Average response time"
+        "label": "Average Response Time"
       },
       {
         "value": "91%",
-        "label": "SLA compliance"
+        "label": "SLA Compliance"
       }
     ],
     "ariaLabels": {
@@ -234,14 +234,14 @@
   },
   "contact": {
     "title": "Contact Us",
-    "subtitle": "Ready to start cooperation? Leave a request and we will contact you within an hour",
+    "subtitle": "Ready to start working together? Submit a request and we'll contact you within an hour",
     "info": {
       "title": "Contact Information",
-      "description": "We are always ready to answer your questions and discuss cooperation opportunities. Choose a convenient way to contact us."
+      "description": "We're always ready to answer your questions and discuss collaboration opportunities. Choose your preferred contact method."
     },
     "form": {
-      "title": "Submit a request",
-      "subtitle": "Fill out the form and we will contact you",
+      "title": "Submit Request",
+      "subtitle": "Fill out the form and we'll contact you",
       "name": "Name *",
       "namePlaceholder": "Your name",
       "email": "Email *",
@@ -249,14 +249,14 @@
       "company": "Company",
       "companyPlaceholder": "Company name",
       "phone": "Phone",
-      "phonePlaceholder": "+1 (999) 123-45-67",
+      "phonePlaceholder": "+1 (555) 123-4567",
       "message": "Message *",
       "messagePlaceholder": "Tell us about your needs...",
-      "submit": "Submit request",
-      "submitting": "Sending...",
+      "submit": "Submit Request",
+      "submitting": "Submitting...",
       "success": {
-        "title": "Request sent!",
-        "message": "Thank you for contacting us. We will contact you within an hour."
+        "title": "Request Submitted!",
+        "message": "Thank you for contacting us. We'll get back to you within an hour."
       }
     },
     "methods": [
@@ -267,7 +267,7 @@
       },
       {
         "title": "Phone",
-        "value": "+7 (495) 123-45-67",
+        "value": "+1 (555) 123-4567",
         "description": "Mon-Fri 9:00 AM - 6:00 PM"
       },
       {
@@ -277,14 +277,14 @@
     ]
   },
   "footer": {
-    "description": "Your reliable partner in BPO services. We optimize business processes to improve efficiency and reduce costs.",
+    "description": "Your reliable partner in BPO services. We optimize business processes to increase efficiency and reduce costs.",
     "links": {
       "company": "Company",
       "services": "Services",
       "support": "Support"
     },
     "companyLinks": [
-      { "name": "About", "href": "#about" },
+      { "name": "About Us", "href": "#about" },
       { "name": "Services", "href": "#services" },
       { "name": "Advantages", "href": "#advantages" },
       { "name": "Testimonials", "href": "#testimonials" }
@@ -302,7 +302,7 @@
       { "name": "FAQ", "href": "#" }
     ],
     "contact": {
-      "title": "Contacts",
+      "title": "Contact",
       "consultation": "Consultation"
     },
     "copyright": "All rights reserved.",
@@ -313,4 +313,3 @@
     }
   }
 }
-

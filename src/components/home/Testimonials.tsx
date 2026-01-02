@@ -5,13 +5,14 @@ import { ClockClockwiseLogo, LightingLogo, UsersLogo, StarLogo, UserLogo } from 
 import { useLanguage } from "@/contexts/LanguageContext";
 import ruContent from '@/data/ru/content.json';
 import enContent from '@/data/en/content.json';
+import esContent from '@/data/es/content.json';
 
 import '@/styles/components/home/testimonials.scss';
 
 const Testimonials: React.FC = () => {
     const { language } = useLanguage();
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
-    const contentData = language === 'ru' ? ruContent : enContent;
+    const contentData = language === 'ru' ? ruContent : language === 'en' ? enContent : esContent;
     const { testimonials: testimonialsData } = contentData;
 
     const testimonials = testimonialsData.items.map((item) => ({
