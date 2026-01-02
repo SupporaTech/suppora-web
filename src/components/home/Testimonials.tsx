@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from "react";
-import { ClockClockwiseLogo, LightningLogo, UsersLogo, StarLogo, UserLogo } from "@/components/icons";
+import { ClockClockwiseLogo, LightningLogo, UsersLogo, StarLogo, UserLogo, CheckCircleLogo } from "@/components/icons";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ruContent from '@/data/ru/content.json';
 import enContent from '@/data/en/content.json';
@@ -41,9 +41,7 @@ const Testimonials: React.FC = () => {
                     <div className="testimonial-card animate-fade-in-up">
                         <div className="testimonial-header">
                             <div className="testimonial-avatar">
-                <span className="avatar-emoji">
-                  {testimonials[currentTestimonial].avatar}
-                </span>
+                                {testimonials[currentTestimonial].avatar}
                             </div>
                             <div className="testimonial-info">
                                 <h3>{testimonials[currentTestimonial].name}</h3>
@@ -74,7 +72,9 @@ const Testimonials: React.FC = () => {
                                     {testimonials[currentTestimonial].results.map(
                                         (result, index) => (
                                             <div key={index} className="result-item">
-                                                <span className="result-icon">✓</span>
+                                                <span className="result-icon">
+                                                    <CheckCircleLogo size={20} color="currentColor#" />
+                                                </span>
                                                 <span className="result-text">{result}</span>
                                             </div>
                                         )
