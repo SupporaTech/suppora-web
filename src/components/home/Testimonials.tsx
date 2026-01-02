@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from "react";
-import { ClockClockwiseLogo, LightingLogo, UsersLogo, StarLogo, UserLogo, LightningLogo } from "@/components/icons";
+import { ClockClockwiseLogo, LightningLogo, UsersLogo, StarLogo, UserLogo } from "@/components/icons";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ruContent from '@/data/ru/content.json';
 import enContent from '@/data/en/content.json';
