@@ -1,11 +1,12 @@
 import React from "react";
 
 import '@/styles/components/home/services.scss';
+import { PhoneLogo, ChartBarLogo } from "@/components/icons";
 
 const Services: React.FC = () => {
     const services = [
         {
-            icon: "📞",
+            icon: <PhoneLogo size={48} color="#E7E7E7" />,
             title: "Техническая поддержка L1",
             description: "Профессиональная поддержка клиентов на любом языке",
             features: [
@@ -15,7 +16,7 @@ const Services: React.FC = () => {
             ],
         },
         {
-            icon: "📊",
+            icon: <ChartBarLogo size={48} color="#E7E7E7" />,
             title: "Техническая поддержка L1 и L2",
             description: "Профессиональная поддержка клиентов на любом языке",
             features: [
