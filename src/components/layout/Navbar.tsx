@@ -138,6 +138,15 @@ const Header: React.FC = () => {
                                     >
                                         EN
                                     </button>
+                                    <button
+                                        className={`language-option ${language === 'es' ? 'active' : ''}`}
+                                        onClick={() => {
+                                            setLanguage('es');
+                                            setIsLanguageMenuOpen(false);
+                                        }}
+                                    >
+                                        ES
+                                    </button>
                                 </div>
                             )}
                         </div>

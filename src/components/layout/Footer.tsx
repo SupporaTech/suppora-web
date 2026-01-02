@@ -4,6 +4,7 @@ import React from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ruContent from "@/data/ru/content.json";
 import enContent from "@/data/en/content.json";
+import esContent from "@/data/es/content.json";
 
 import {
     EnvelopeSimple,
@@ -16,7 +17,7 @@ import '@/styles/components/layout/footer.scss';
 
 const Footer: React.FC = () => {
     const { language } = useLanguage();
-    const contentData = language === 'ru' ? ruContent : enContent;
+    const contentData = language === 'ru' ? ruContent : language === 'en' ? enContent : esContent;
     const content = contentData.footer;
     const currentYear = new Date().getFullYear();
 

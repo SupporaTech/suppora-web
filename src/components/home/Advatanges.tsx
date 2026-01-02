@@ -4,7 +4,7 @@ import React from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ruContent from '@/data/ru/content.json';
 import enContent from '@/data/en/content.json';
-
+import esContent from '@/data/es/content.json';
 import '@/styles/components/home/advantages.scss';
 import { ShieldLogo, GraphLogo, LightningLogo, LockLogo, RocketLogo } from "@/components/icons";
 
@@ -20,7 +20,7 @@ const iconMap: Record<string, React.ComponentType<{ color: string; size: number 
 
 const Advantages: React.FC = () => {
     const { language } = useLanguage();
-    const contentData = language === 'ru' ? ruContent : enContent;
+    const contentData = language === 'ru' ? ruContent : language === 'en' ? enContent : esContent;
     const { advantages: advantagesData } = contentData;
     const advantages = advantagesData.items;
     const stats = advantagesData.stats;

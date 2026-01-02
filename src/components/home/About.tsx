@@ -4,13 +4,14 @@ import React from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ruContent from '@/data/ru/content.json';
 import enContent from '@/data/en/content.json';
+import esContent from '@/data/es/content.json';
 
 import '@/styles/components/home/about.scss';
 import { CheckCircleLogo, LightningLogo, StarLogo } from "@/components/icons";
 
 const About: React.FC = () => {
     const { language } = useLanguage();
-    const contentData = language === 'ru' ? ruContent : enContent;
+    const contentData = language === 'ru' ? ruContent : language === 'en' ? enContent : esContent;
     const { about } = contentData;
 
     return (
