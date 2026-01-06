@@ -29,18 +29,25 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
     useEffect(() => {
         // Load language from localStorage or detect from browser
         const savedLanguage = localStorage.getItem('language') as Language;
-        if (savedLanguage && (savedLanguage === 'ru' || savedLanguage === 'en')) {
+        if (savedLanguage && (savedLanguage === 'ru' || savedLanguage === 'en' || savedLanguage === 'es')) {
             setLanguageState(savedLanguage);
+            // Set cookie for server components
+            document.cookie = `language=${savedLanguage}; path=/; max-age=31536000`;
         } else {
             // Detect browser language
             const browserLang = navigator.language.split('-')[0];
-            setLanguageState(browserLang === 'en' ? 'en' : 'ru');
+            const detectedLang = browserLang === 'en' ? 'en' : browserLang === 'es' ? 'es' : 'ru';
+            setLanguageState(detectedLang);
+            // Set cookie for server components
+            document.cookie = `language=${detectedLang}; path=/; max-age=31536000`;
         }
     }, []);
 
     const setLanguage = (lang: Language) => {
         setLanguageState(lang);
         localStorage.setItem('language', lang);
+        // Set cookie for server components
+        document.cookie = `language=${lang}; path=/; max-age=31536000`;
         // Update HTML lang attribute
         document.documentElement.lang = lang;
     };

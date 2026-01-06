@@ -78,7 +78,6 @@ const Hero: React.FC = () => {
                             <button className="btn btn-primary" onClick={scrollToContact}>
                                 {content.buttons.consultation}
                             </button>
-                            <button className="btn btn-secondary">{content.buttons.presentation}</button>
                         </div>
                     </div>
 
