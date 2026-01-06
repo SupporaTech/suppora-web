@@ -81,7 +81,6 @@ const Advantages: React.FC = () => {
                                 <button className="btn btn-primary">
                                     {advantagesData.cta.primaryButton}
                                 </button>
-                                <button className="btn btn-secondary">{advantagesData.cta.secondaryButton}</button>
                             </div>
                         </div>
                         <div className="cta-visual">
