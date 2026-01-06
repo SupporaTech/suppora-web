@@ -83,7 +83,8 @@
           "Multi-channel support (Email, chats, calls)",
           "Monitoring & Alert response",
           "Customer-centric approach"
-        ]
+        ],
+        "expandedContent": "Our Level 1 technical support team ensures fast and efficient handling of customer inquiries. We operate 24/7, guaranteeing minimal response time and maximum customer satisfaction. Our specialists undergo regular training and certification to maintain high service standards."
       },
       {
         "icon": "📊",
@@ -93,10 +94,12 @@
           "Multi-channel support (Email, chats, calls)",
           "Monitoring & Alert response",
           "Customer-centric approach"
-        ]
+        ],
+        "expandedContent": "Our comprehensive two-tier support system allows us to effectively handle tasks of any complexity. Level 1 handles standard inquiries, while Level 2 specializes in complex technical issues requiring deep expertise. This ensures optimal workload distribution and maximum team efficiency."
       }
     ],
     "button": "Learn More",
+    "buttonCollapse": "Show Less",
     "cta": {
       "title": "Need a personalized consultation?",
       "description": "Our experts will help you find the optimal solution for your business",
@@ -162,7 +165,6 @@
       "title": "Ready to improve your business efficiency?",
       "description": "Get a free consultation and learn how SUPPORA can optimize your processes and help your project/clients.",
       "primaryButton": "Get Consultation",
-      "secondaryButton": "Download Case Studies",
       "chartLabels": {
         "before": "Before",
         "after": "After"

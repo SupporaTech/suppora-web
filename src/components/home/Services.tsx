@@ -1,6 +1,6 @@
 'use client';
 
-import React from "react";
+import React, { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ruContent from "@/data/ru/content.json";
 import enContent from "@/data/en/content.json";
@@ -20,6 +20,19 @@ const Services: React.FC = () => {
     const contentData = language === 'ru' ? ruContent : language === 'en' ? enContent : esContent;
     const content = contentData.services;
     const services = content.items;
+    const [expandedCards, setExpandedCards] = useState<Set<number>>(new Set());
+
+    const toggleCard = (index: number) => {
+        setExpandedCards(prev => {
+            const newSet = new Set(prev);
+            if (newSet.has(index)) {
+                newSet.delete(index);
+            } else {
+                newSet.add(index);
+            }
+            return newSet;
+        });
+    };
 
     return (
         <section id="services" className="services">
@@ -32,10 +45,11 @@ const Services: React.FC = () => {
                 <div className="services-grid">
                     {services.map((service, index) => {
                         const IconComponent = iconMap[service.icon];
+                        const isExpanded = expandedCards.has(index);
                         return (
                             <div
                                 key={index}
-                                className={`service-card animate-fade-in-up`}
+                                className={`service-card animate-fade-in-up ${isExpanded ? 'expanded' : ''}`}
                                 style={{ animationDelay: `${index * 0.1}s` }}
                             >
                                 <div className="service-icon">
@@ -45,19 +59,29 @@ const Services: React.FC = () => {
                                         <span className="icon-emoji">{service.icon}</span>
                                     )}
                                 </div>
-                            <div className="service-content">
-                                <h3>{service.title}</h3>
-                                <p>{service.description}</p>
-                                <ul className="service-features">
-                                    {service.features.map((feature, featureIndex) => (
-                                        <li key={featureIndex}>{feature}</li>
-                                    ))}
-                                </ul>
+                                <div className="service-content">
+                                    <h3>{service.title}</h3>
+                                    <p>{service.description}</p>
+                                    <ul className="service-features">
+                                        {service.features.map((feature, featureIndex) => (
+                                            <li key={featureIndex}>{feature}</li>
+                                        ))}
+                                    </ul>
+                                    {isExpanded && service.expandedContent && (
+                                        <div className="service-expanded-content">
+                                            <p>{service.expandedContent}</p>
+                                        </div>
+                                    )}
+                                </div>
+                                <div className="service-footer">
+                                    <button 
+                                        className="btn btn-secondary"
+                                        onClick={() => toggleCard(index)}
+                                    >
+                                        {isExpanded ? (content.buttonCollapse || 'Show Less') : content.button}
+                                    </button>
+                                </div>
                             </div>
-                            <div className="service-footer">
-                                <button className="btn btn-secondary">{content.button}</button>
-                            </div>
-                        </div>
                         );
                     })}
                 </div>

@@ -36,12 +36,17 @@
   border-radius: 20px;
   padding: 2rem;
   backdrop-filter: blur(10px);
-  transition: all var(--transition-normal);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  max-height: 423px;
+}
+
+.service-card.expanded {
+  max-height: none;
+  border-color: var(--primary-color);
 }
 
 .service-card::before {
@@ -56,14 +61,18 @@
   transition: transform var(--transition-normal);
 }
 
-.service-card:hover {
+.service-card:not(.expanded):hover {
   transform: translateY(-10px);
   border-color: var(--primary-color);
   box-shadow: 0 25px 50px rgba(133, 92, 228, 0.15);
 }
 
-.service-card:hover::before {
+.service-card:not(.expanded):hover::before {
   transform: scaleX(1);
+}
+
+.service-card.expanded:hover {
+  box-shadow: 0 25px 50px rgba(133, 92, 228, 0.2);
 }
 
 .service-icon {
@@ -86,6 +95,12 @@
 .service-content {
   flex: 1;
   margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.service-card:not(.expanded) .service-content {
+  max-height: 280px;
+  overflow: hidden;
 }
 
 .service-content h3 {
@@ -128,6 +143,42 @@
   color: var(--primary-color);
   font-weight: bold;
   font-size: 1.2rem;
+}
+
+.service-expanded-content {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  animation: slideDown 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  overflow: hidden;
+}
+
+.service-expanded-content p {
+  color: rgba(231, 231, 231, 0.9);
+  line-height: 1.8;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    padding-top: 0;
+    margin-top: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    max-height: 1000px;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    transform: translateY(0);
+  }
+}
+
+.service-card.expanded::before {
+  transform: scaleX(1);
 }
 
 .service-footer {
@@ -196,6 +247,15 @@
 
   .service-card {
     padding: 1.5rem;
+    max-height: 420px;
+  }
+
+  .service-card.expanded {
+    max-height: none;
+  }
+
+  .service-card:not(.expanded) .service-content {
+    max-height: 250px;
   }
 
   .service-icon {
@@ -223,6 +283,15 @@
 @media (max-width: 480px) {
   .service-card {
     padding: 1rem;
+    max-height: 400px;
+  }
+
+  .service-card.expanded {
+    max-height: none;
+  }
+
+  .service-card:not(.expanded) .service-content {
+    max-height: 230px;
   }
 
   .service-icon {

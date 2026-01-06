@@ -83,7 +83,8 @@
           "Soporte multicanal (Email, chats, llamadas)",
           "Monitoreo y respuesta a Alertas",
           "Enfoque centrado en el cliente"
-        ]
+        ],
+        "expandedContent": "Nuestro equipo de soporte técnico de nivel 1 garantiza un manejo rápido y eficiente de las consultas de los clientes. Operamos 24/7, garantizando un tiempo de respuesta mínimo y la máxima satisfacción del cliente. Nuestros especialistas se someten a formación y certificación regular para mantener altos estándares de servicio."
       },
       {
         "icon": "📊",
@@ -93,10 +94,12 @@
           "Soporte multicanal (Email, chats, llamadas)",
           "Monitoreo y respuesta a Alertas",
           "Enfoque centrado en el cliente"
-        ]
+        ],
+        "expandedContent": "Nuestro sistema integral de soporte de dos niveles nos permite manejar eficazmente tareas de cualquier complejidad. El Nivel 1 maneja consultas estándar, mientras que el Nivel 2 se especializa en problemas técnicos complejos que requieren experiencia profunda. Esto asegura una distribución óptima de la carga de trabajo y la máxima eficiencia del equipo."
       }
     ],
     "button": "Más Información",
+    "buttonCollapse": "Mostrar Menos",
     "cta": {
       "title": "¿Necesita una consultoría personalizada?",
       "description": "Nuestros expertos le ayudarán a encontrar la solución óptima para su negocio",
@@ -162,7 +165,6 @@
       "title": "¿Listo para mejorar la eficiencia de su negocio?",
       "description": "Obtenga una consultoría gratuita y descubra cómo SUPPORA puede optimizar sus procesos y ayudar a su proyecto/clientes.",
       "primaryButton": "Obtener Consultoría",
-      "secondaryButton": "Descargar Casos de Estudio",
       "chartLabels": {
         "before": "Antes",
         "after": "Después"
