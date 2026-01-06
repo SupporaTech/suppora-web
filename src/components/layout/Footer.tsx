@@ -8,6 +8,7 @@ import esContent from "@/data/es/content.json";
 
 import {
     EnvelopeSimple,
+    MapPinLogo,
     LinkedInLogo,
     TelegramLogo,
     WhatsAppLogo,
@@ -23,7 +24,6 @@ const Footer: React.FC = () => {
 
     const footerLinks = {
         company: content.companyLinks,
-        services: content.serviceLinks,
         support: content.supportLinks,
     };
 
@@ -103,16 +103,7 @@ const Footer: React.FC = () => {
                             </ul>
                         </div>
 
-                        <div className="link-group">
-                            <h4>{content.links.services}</h4>
-                            <ul>
-                                {footerLinks.services.map((link, index) => (
-                                    <li key={index}>
-                                        <a href={link.href}>{link.name}</a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                        
 
                         <div className="link-group">
                             <h4>{content.links.support}</h4>
@@ -140,15 +131,12 @@ const Footer: React.FC = () => {
                         <h4>{content.contact.title}</h4>
                         <div className="contact-info">
                             <div className="contact-item">
-                                <span className="contact-icon">📧</span>
+                            <EnvelopeSimple size={18} color="#E7E7E7" />
                                 <span>info@suppora.com</span>
                             </div>
+                            
                             <div className="contact-item">
-                                <span className="contact-icon">📞</span>
-                                <span>+7 (495) 123-45-67</span>
-                            </div>
-                            <div className="contact-item">
-                                <span className="contact-icon">📍</span>
+                            <MapPinLogo size={24} color="#E7E7E7" />
                                 <span>Москва, ул. Примерная, 123</span>
                             </div>
                         </div>
