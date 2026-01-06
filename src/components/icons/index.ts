@@ -14,3 +14,4 @@ export * from './ShieldLogo';
 export * from './GraphLogo';
 export * from './LockLogo';
 export * from './CheckCircleLogo';
+export * from './MapPinLogo';

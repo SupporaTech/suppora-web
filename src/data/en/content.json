@@ -17,8 +17,7 @@
       "savings": "Cost Savings"
     },
     "buttons": {
-      "consultation": "Get Consultation",
-      "presentation": "Download Presentation"
+      "consultation": "Get Consultation"
     },
     "dashboard": {
       "title": "SUPPORA Dashboard",
@@ -55,6 +54,10 @@
         {
           "number": "10+",
           "label": "specialists with deep technical expertise and multilingual skills"
+        },
+        {
+          "number": "99+",
+          "label": "cool balls and beans"
         }
       ]
     },
@@ -310,6 +313,19 @@
       "privacy": "Privacy Policy",
       "terms": "Terms of Use",
       "agreement": "User Agreement"
+    }
+  },
+  "metadata": {
+    "applicationName": "SUPPORA",
+    "title": "SUPPORA - BPO Services for Your Business",
+    "description": "SUPPORA - professional BPO services for business process optimization. Reduce operational costs by up to 30% and increase efficiency.",
+    "keywords": ["BPO", "outsourcing", "business processes", "optimization", "customer support", "data processing"],
+    "openGraph": {
+      "title": "SUPPORA - BPO Services for Your Business",
+      "description": "Professional BPO solutions to improve your business efficiency"
+    },
+    "twitter": {
+      "description": "SUPPORA - BPO services for business optimization"
     }
   }
 }

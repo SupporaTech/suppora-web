@@ -157,11 +157,12 @@
 }
 
 .values-content h4 {
-  font-size: 1.2rem;
+  font-size: 2.5rem;
   font-weight: 600;
   color: var(--text-color);
   margin-bottom: 1rem;
-  background: var(--accent-gradient);
+  text-align: center;
+  background: var(--primary-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

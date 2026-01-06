@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
 
 import React from "react";
 
@@ -7,31 +8,25 @@ import "./globals.scss";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import { getMetadata } from "@/utils/metadata";
 
-export const metadata: Metadata = {
-  applicationName: "SUPPORA",
-  title: "SUPPORA - BPO-услуги для вашего бизнеса",
-  description: "SUPPORA - профессиональные BPO-услуги для оптимизации бизнес-процессов. Снижаем операционные расходы до 30% и повышаем эффективность.",
-  keywords: ["BPO", "аутсорсинг", " бизнес-процессы", "оптимизация", "клиентская поддержка", "обработка данных"],
-  authors: [
-    { name: "Suppora", url: "https://suppora.tech" }
-  ],
-  openGraph: {
-    title: "SUPPORA - BPO-услуги для вашего бизнеса",
-    description: "Профессиональные BPO-решения для повышения эффективности вашего бизнеса",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    description: "SUPPORA - BPO-услуги для оптимизации бизнеса",
-  },
-};
+type Language = 'ru' | 'en' | 'es';
+
+export async function generateMetadata(): Promise<Metadata> {
+  const cookieStore = await cookies();
+  const language = (cookieStore.get('language')?.value || 'ru') as Language;
+  
+  return getMetadata(language);
+}
 
 type Props = React.PropsWithChildren;
 
-export default function RootLayout({ children }: Readonly<Props>) {
+export default async function RootLayout({ children }: Readonly<Props>) {
+  const cookieStore = await cookies();
+  const language = (cookieStore.get('language')?.value || 'ru') as Language;
+
   return (
-    <html lang="ru">
+    <html lang={language}>
       <body className={`antialiased`}>
         <LanguageProvider>
           <div className="wrapper">
