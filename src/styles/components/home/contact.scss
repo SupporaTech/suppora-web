@@ -27,7 +27,7 @@
 }
 
 .contact-info h3 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
   color: var(--text-color);
   margin-bottom: 1rem;
@@ -38,7 +38,7 @@
 }
 
 .contact-info > p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: rgba(231, 231, 231, 0.8);
   line-height: 1.6;
   margin-bottom: 2rem;
@@ -91,21 +91,21 @@
 }
 
 .method-content h4 {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
   font-weight: 600;
   color: var(--text-color);
   margin-bottom: 0.25rem;
 }
 
 .method-value {
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 1.5vw, 1rem);
   color: var(--primary-color);
   font-weight: 500;
   margin-bottom: 0.25rem;
 }
 
 .method-description {
-  font-size: 0.9rem;
+  font-size: clamp(0.85rem, 1.5vw, 0.9rem);
   color: rgba(231, 231, 231, 0.7);
   margin: 0;
 }
