@@ -54,7 +54,7 @@ const Services: React.FC = () => {
                             >
                                 <div className="service-icon">
                                     {IconComponent ? (
-                                        <IconComponent color="currentColor" size={48} />
+                                        <IconComponent color="currentColor" size={32} />
                                     ) : (
                                         <span className="icon-emoji">{service.icon}</span>
                                     )}
