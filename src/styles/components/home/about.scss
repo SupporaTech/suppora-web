@@ -52,13 +52,14 @@
 }
 
 .feature-content h3 {
-  font-size: 1.3rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
   font-weight: 600;
   color: var(--text-color);
   margin-bottom: 0.5rem;
 }
 
 .feature-content p {
+  font-size: 1rem;
   color: rgba(231, 231, 231, 0.8);
   line-height: 1.6;
   margin: 0;
@@ -86,7 +87,7 @@
 }
 
 .card-header h3 {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   font-weight: 600;
   color: var(--text-color);
   margin-bottom: 1rem;
@@ -97,6 +98,7 @@
 }
 
 .card-content p {
+  font-size: 1rem;
   color: rgba(231, 231, 231, 0.8);
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -118,7 +120,7 @@
 
 .mission-stat .stat-number {
   display: block;
-  font-size: 1.8rem;
+  font-size: clamp(1.5rem, 3vw, 1.8rem);
   font-weight: 700;
   background: var(--primary-gradient);
   -webkit-background-clip: text;
@@ -129,7 +131,7 @@
 
 .mission-stat .stat-label {
   display: block;
-  font-size: 0.8rem;
+  font-size: clamp(0.75rem, 1.5vw, 0.8rem);
   color: rgba(231, 231, 231, 0.7);
   margin-top: 0.5rem;
 }
@@ -157,7 +159,7 @@
 }
 
 .values-content h4 {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 600;
   color: var(--text-color);
   margin-bottom: 1rem;
@@ -178,6 +180,7 @@
   position: relative;
   padding-left: 1.5rem;
   margin-bottom: 0.8rem;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
   color: rgba(231, 231, 231, 0.8);
   line-height: 1.5;
 }

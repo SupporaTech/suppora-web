@@ -105,7 +105,8 @@ h3 {
 
 p {
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* Container */
@@ -173,10 +174,11 @@ section {
 }
 
 .section-title p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: rgba(231, 231, 231, 0.8);
   max-width: 800px;
   margin: 0 auto;
+  line-height: 1.6;
 }
 
 /* Grid */
@@ -306,6 +308,14 @@ section {
     --container-padding: 0 15px;
   }
 
+  p {
+    font-size: 0.95rem;
+  }
+
+  .section-title p {
+    font-size: 1rem;
+  }
+
   .grid-2,
   .grid-3,
   .grid-4 {
@@ -320,6 +330,14 @@ section {
 @media (max-width: 480px) {
   :root {
     --section-padding: 40px 0;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .section-title p {
+    font-size: 0.95rem;
   }
 
   .btn {
