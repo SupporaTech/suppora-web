@@ -171,7 +171,7 @@
 .values-content ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 1rem;
 }
 
 .values-content li {
@@ -227,6 +227,19 @@
   .about-card {
     padding: 1.5rem;
   }
+
+  .values-content {
+    padding: 2rem var(--container-padding);
+  }
+
+  .values-content ul {
+    margin: 0 0.5rem;
+  }
+
+  .values-wrapper {
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+  }
 }
 
 @media (max-width: 480px) {
@@ -240,10 +253,16 @@
   }
 
   .values-content {
-    padding: 1.5rem var(--container-padding);
+    padding: 2rem var(--container-padding);
+  }
+
+  .values-content ul {
+    margin: 0 0.5rem;
   }
 
   .values-wrapper {
     margin-top: 3rem;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
   }
 }

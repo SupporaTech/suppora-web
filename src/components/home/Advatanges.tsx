@@ -46,7 +46,7 @@ const Advantages: React.FC = () => {
                                     <div className="advantage-number">{advantage.number}</div>
                                     <div className="advantage-icon">
                                         {IconComponent ? (
-                                            <IconComponent color="currentColor" size={48} />
+                                            <IconComponent color="currentColor" size={32} />
                                         ) : (
                                             <span className="icon-emoji">{advantage.icon}</span>
                                         )}

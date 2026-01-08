@@ -85,6 +85,11 @@
   filter: grayscale(0);
 }
 
+.method-content {
+  text-align: center;
+  flex: 1;
+}
+
 .method-content h4 {
   font-size: 1.1rem;
   font-weight: 600;
@@ -290,6 +295,17 @@
 
   .contact-info {
     order: 2;
+    text-align: center;
+  }
+
+  .contact-info h3 {
+    text-align: center;
+  }
+
+  .contact-info > p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .contact-form-container {
@@ -298,12 +314,30 @@
 }
 
 @media (max-width: 768px) {
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-info h3 {
+    text-align: center;
+  }
+
+  .contact-info > p {
+    text-align: center;
+  }
+
   .contact-methods {
     gap: 1rem;
   }
 
   .contact-method {
     padding: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .method-content {
+    text-align: center;
   }
 
   .method-icon {
@@ -329,12 +363,30 @@
 }
 
 @media (max-width: 480px) {
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-info h3 {
+    text-align: center;
+  }
+
+  .contact-info > p {
+    text-align: center;
+  }
+
   .contact-form-card {
     padding: 1.5rem;
   }
 
   .contact-method {
     flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .method-content {
     text-align: center;
   }
 
