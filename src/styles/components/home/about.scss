@@ -1,5 +1,5 @@
 .about {
-  background: var(--background-color);
+  background: transparent;
   position: relative;
 }
 
@@ -10,11 +10,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-                  135deg,
-                  rgba(133, 92, 228, 0.03) 0%,
-                  transparent 50%,
-                  rgba(123, 83, 243, 0.03) 100%
+  background: radial-gradient(
+    ellipse 80% 50% at 50% 0%,
+    rgba(168, 85, 247, 0.04) 0%,
+    transparent 60%
   );
   pointer-events: none;
 }
@@ -42,13 +41,13 @@
   width: 60px;
   height: 60px;
   background: var(--primary-gradient);
-  border-radius: 15px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   flex-shrink: 0;
-  box-shadow: 0 8px 20px rgba(133, 92, 228, 0.3);
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4), 0 0 20px rgba(168, 85, 247, 0.2);
 }
 
 .feature-content h3 {
@@ -72,18 +71,18 @@
 }
 
 .about-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 24px;
   padding: 2rem;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(16px);
   transition: all var(--transition-normal);
 }
 
 .about-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--primary-color);
-  box-shadow: 0 20px 40px rgba(133, 92, 228, 0.1);
+  transform: translateY(-6px);
+  border-color: rgba(168, 85, 247, 0.5);
+  box-shadow: 0 25px 50px rgba(168, 85, 247, 0.15), 0 0 40px rgba(168, 85, 247, 0.08);
 }
 
 .card-header h3 {
@@ -99,7 +98,7 @@
 
 .card-content p {
   font-size: 1rem;
-  color: rgba(231, 231, 231, 0.8);
+  color: var(--text-muted);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -113,9 +112,9 @@
 .mission-stat {
   text-align: center;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
 }
 
 .mission-stat .stat-number {
@@ -132,7 +131,7 @@
 .mission-stat .stat-label {
   display: block;
   font-size: clamp(0.75rem, 1.5vw, 0.8rem);
-  color: rgba(231, 231, 231, 0.7);
+  color: var(--text-muted);
   margin-top: 0.5rem;
 }
 
@@ -145,9 +144,9 @@
 }
 
 .values {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 24px;
   padding: 0;
   width: 100%;
 }
@@ -181,7 +180,7 @@
   padding-left: 1.5rem;
   margin-bottom: 0.8rem;
   font-size: clamp(0.9rem, 1.5vw, 1rem);
-  color: rgba(231, 231, 231, 0.8);
+  color: var(--text-muted);
   line-height: 1.5;
 }
 
