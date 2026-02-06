@@ -12,10 +12,10 @@
   bottom: 0;
   background: linear-gradient(
                   45deg,
-                  rgba(133, 92, 228, 0.05) 0%,
+                  rgba(168, 85, 247, 0.1) 0%,
                   transparent 30%,
                   transparent 70%,
-                  rgba(123, 83, 243, 0.05) 100%
+                  rgba(34, 211, 238, 0.06) 100%
   );
   pointer-events: none;
 }
@@ -32,11 +32,11 @@
 }
 
 .advantage-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 24px;
   padding: 2rem;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(16px);
   transition: all var(--transition-normal);
   position: relative;
   overflow: hidden;
@@ -87,12 +87,12 @@
   width: 60px;
   height: 60px;
   background: var(--primary-gradient);
-  border-radius: 15px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
-  box-shadow: 0 10px 25px rgba(133, 92, 228, 0.3);
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4), 0 0 20px rgba(168, 85, 247, 0.2);
   position: relative;
   z-index: 2;
 }
@@ -132,11 +132,11 @@
 }
 
 .advantages-stats {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 25px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 28px;
   padding: 3rem;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(24px);
 }
 
 .stats-grid {
@@ -148,16 +148,16 @@
 .stat-item {
   text-align: center;
   padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(168, 85, 247, 0.05);
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
   transition: all var(--transition-normal);
 }
 
 .stat-item:hover {
   transform: translateY(-5px);
-  border-color: var(--primary-color);
-  box-shadow: 0 15px 30px rgba(133, 92, 228, 0.1);
+  border-color: rgba(168, 85, 247, 0.5);
+  box-shadow: 0 20px 40px rgba(168, 85, 247, 0.15), 0 0 30px rgba(168, 85, 247, 0.08);
 }
 
 .stat-value {
@@ -182,11 +182,11 @@
 }
 
 .cta-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 25px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 28px;
   padding: 3rem;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(24px);
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 3rem;
@@ -253,8 +253,8 @@
 
 .chart-bar {
   width: 60px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px 10px 0 0;
+  background: rgba(168, 85, 247, 0.2);
+  border-radius: 12px 12px 0 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -266,7 +266,7 @@
 
 .chart-bar.active {
   background: var(--primary-gradient);
-  box-shadow: 0 10px 25px rgba(133, 92, 228, 0.3);
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4), 0 0 20px rgba(168, 85, 247, 0.2);
 }
 
 .chart-label {
