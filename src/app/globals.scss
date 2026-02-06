@@ -46,6 +46,21 @@ body {
   --accent-gradient: linear-gradient(135deg, #c084fc 0%, #a855f7 100%);
   --glow-gradient: linear-gradient(135deg, #c084fc 0%, #22d3ee 100%);
   --background-gradient: linear-gradient(180deg, #0a0a0f 0%, #12121a 50%, #0f0f14 100%);
+  /* Единый плавный градиент страницы - для гармоничного перехода между секциями */
+  --page-gradient: linear-gradient(
+    180deg,
+    #050508 0%,
+    #08080d 8%,
+    #0a0a0f 18%,
+    #0b0b11 28%,
+    #0a0a0f 38%,
+    #0b0b11 48%,
+    #0a0a0f 58%,
+    #0b0b11 68%,
+    #0a0a0f 78%,
+    #08080d 90%,
+    #06060a 100%
+  );
   --card-bg: rgba(255, 255, 255, 0.06);
   --card-border: rgba(168, 85, 247, 0.2);
   --glow-primary: 0 0 40px rgba(168, 85, 247, 0.4);
@@ -69,6 +84,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -77,6 +93,13 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+/* Единый фон страницы - плавный переход между секциями */
+.wrapper {
+  background: var(--page-gradient);
+  min-height: 100vh;
+  transition: background 1s ease;
 }
 
 .App {
@@ -163,9 +186,11 @@ p {
   color: white;
 }
 
-/* Sections */
+/* Sections - прозрачный фон для плавного перехода */
 section {
   padding: var(--section-padding);
+  background: transparent;
+  transition: background 0.6s ease;
 }
 
 .section-title {

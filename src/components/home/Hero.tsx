@@ -24,6 +24,7 @@ const Hero: React.FC = () => {
         <section id="home" className="hero">
             <div className="hero-background">
                 <div className="hero-gradient"></div>
+                <div className="hero-transition"></div>
                 <div className="hero-particles">
                     <div className="particle"></div>
                     <div className="particle"></div>
