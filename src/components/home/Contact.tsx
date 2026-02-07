@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import { EnvelopeSimple, PhoneLogo, TelegramLogo, CheckCircleLogo } from "@/components/icons";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ruContent from "@/data/ru/content.json";
@@ -9,58 +10,137 @@ import esContent from "@/data/es/content.json";
 
 import '@/styles/components/home/contact.scss';
 
+const FORMSPREE_ENDPOINT = "mlgwennn";
+
+interface ContactFormProps {
+    content: typeof enContent.contact;
+    onSuccess: () => void;
+}
+
+const LOG_PREFIX = "[ContactForm]";
+
+const ContactForm: React.FC<ContactFormProps> = ({ content, onSuccess }) => {
+    const [state, handleSubmit] = useForm(FORMSPREE_ENDPOINT);
+
+    useEffect(() => {
+        console.log(`${LOG_PREFIX} Mount/remount — endpoint: ${FORMSPREE_ENDPOINT}`);
+    }, []);
+
+    useEffect(() => {
+        console.log(`${LOG_PREFIX} State changed:`, {
+            submitting: state.submitting,
+            succeeded: state.succeeded,
+            errors: state.errors,
+        });
+        if (state.errors) {
+            console.error(`${LOG_PREFIX} Formspree errors:`, state.errors);
+        }
+    }, [state.submitting, state.succeeded, state.errors]);
+
+    useEffect(() => {
+        if (state.succeeded) {
+            console.log(`${LOG_PREFIX} Success — scheduling reset in 3s`);
+            const timer = setTimeout(() => {
+                console.log(`${LOG_PREFIX} Calling onSuccess (remount)`);
+                onSuccess();
+            }, 3000);
+            return () => clearTimeout(timer);
+        }
+    }, [state.succeeded, onSuccess]);
+
+    const wrappedHandleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        console.log(`${LOG_PREFIX} Submit triggered`);
+        handleSubmit(e);
+    };
+
+    if (state.succeeded) {
+        return (
+            <div className="form-success">
+                <div className="success-icon">
+                    <CheckCircleLogo size={48} color="currentColor" />
+                </div>
+                <h4>{content.form.success.title}</h4>
+                <p>{content.form.success.message}</p>
+            </div>
+        );
+    }
+
+    return (
+        <form onSubmit={wrappedHandleSubmit} className="contact-form">
+            <div className="form-row">
+                <div className="form-group">
+                    <label htmlFor="name">{content.form.name}</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        placeholder={content.form.namePlaceholder}
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="email">{content.form.email}</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        placeholder={content.form.emailPlaceholder}
+                    />
+                    <ValidationError prefix="Email" field="email" errors={state.errors} className="form-error" />
+                </div>
+            </div>
+
+            <div className="form-row">
+                <div className="form-group">
+                    <label htmlFor="company">{content.form.company}</label>
+                    <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        placeholder={content.form.companyPlaceholder}
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="phone">{content.form.phone}</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder={content.form.phonePlaceholder}
+                    />
+                </div>
+            </div>
+
+            <div className="form-group">
+                <label htmlFor="message">{content.form.message}</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    required
+                    rows={4}
+                    placeholder={content.form.messagePlaceholder}
+                />
+                <ValidationError prefix="Message" field="message" errors={state.errors} className="form-error" />
+            </div>
+
+            <button
+                type="submit"
+                className="btn btn-primary form-submit"
+                disabled={state.submitting}
+            >
+                {state.submitting ? content.form.submitting : content.form.submit}
+            </button>
+        </form>
+    );
+};
+
 const Contact: React.FC = () => {
     const { language } = useLanguage();
     const contentData = language === 'ru' ? ruContent : language === 'en' ? enContent : esContent;
     const content = contentData.contact;
 
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        company: "",
-        phone: "",
-        service: "",
-        message: "",
-    });
-
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isSubmitted, setIsSubmitted] = useState(false);
-
-    const handleInputChange = (
-        e: React.ChangeEvent<
-            HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-        >
-    ) => {
-        const { name, value } = e.target;
-        setFormData((prev) => ({
-            ...prev,
-            [name]: value,
-        }));
-    };
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-
-        // Simulate form submission
-        await new Promise((resolve) => setTimeout(resolve, 2000));
-
-        setIsSubmitting(false);
-        setIsSubmitted(true);
-
-        // Reset form after 3 seconds
-        setTimeout(() => {
-            setIsSubmitted(false);
-            setFormData({
-                name: "",
-                email: "",
-                company: "",
-                phone: "",
-                service: "",
-                message: "",
-            });
-        }, 3000);
-    };
+    const [formKey, setFormKey] = useState(0);
 
     const contactInfo = content.methods.map((method, index) => {
         const icons = [
@@ -110,90 +190,11 @@ const Contact: React.FC = () => {
                                 <p>{content.form.subtitle}</p>
                             </div>
 
-                            {isSubmitted ? (
-                                <div className="form-success">
-                                    <div className="success-icon">
-                                        <CheckCircleLogo size={48} color="currentColor" />
-                                    </div>
-                                    <h4>{content.form.success.title}</h4>
-                                    <p>{content.form.success.message}</p>
-                                </div>
-                            ) : (
-                                <form onSubmit={handleSubmit} className="contact-form">
-                                    <div className="form-row">
-                                        <div className="form-group">
-                                            <label htmlFor="name">{content.form.name}</label>
-                                            <input
-                                                type="text"
-                                                id="name"
-                                                name="name"
-                                                value={formData.name}
-                                                onChange={handleInputChange}
-                                                required
-                                                placeholder={content.form.namePlaceholder}
-                                            />
-                                        </div>
-                                        <div className="form-group">
-                                            <label htmlFor="email">{content.form.email}</label>
-                                            <input
-                                                type="email"
-                                                id="email"
-                                                name="email"
-                                                value={formData.email}
-                                                onChange={handleInputChange}
-                                                required
-                                                placeholder={content.form.emailPlaceholder}
-                                            />
-                                        </div>
-                                    </div>
-
-                                    <div className="form-row">
-                                        <div className="form-group">
-                                            <label htmlFor="company">{content.form.company}</label>
-                                            <input
-                                                type="text"
-                                                id="company"
-                                                name="company"
-                                                value={formData.company}
-                                                onChange={handleInputChange}
-                                                placeholder={content.form.companyPlaceholder}
-                                            />
-                                        </div>
-                                        <div className="form-group">
-                                            <label htmlFor="phone">{content.form.phone}</label>
-                                            <input
-                                                type="tel"
-                                                id="phone"
-                                                name="phone"
-                                                value={formData.phone}
-                                                onChange={handleInputChange}
-                                                placeholder={content.form.phonePlaceholder}
-                                            />
-                                        </div>
-                                    </div>
-
-                                    <div className="form-group">
-                                        <label htmlFor="message">{content.form.message}</label>
-                                        <textarea
-                                            id="message"
-                                            name="message"
-                                            value={formData.message}
-                                            onChange={handleInputChange}
-                                            required
-                                            rows={4}
-                                            placeholder={content.form.messagePlaceholder}
-                                        />
-                                    </div>
-
-                                    <button
-                                        type="submit"
-                                        className="btn btn-primary form-submit"
-                                        disabled={isSubmitting}
-                                    >
-                                        {isSubmitting ? content.form.submitting : content.form.submit}
-                                    </button>
-                                </form>
-                            )}
+                            <ContactForm
+                                key={formKey}
+                                content={content}
+                                onSuccess={() => setFormKey((k) => k + 1)}
+                            />
                         </div>
                     </div>
                 </div>
