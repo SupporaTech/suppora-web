@@ -10,7 +10,7 @@
   },
   "hero": {
     "title": "Optimize your business operations with",
-    "subtitle": "We provide professional two-tier technical support, serving clients in the USA and Europe in multiple languages. Our team's strong technical expertise helps reduce operational costs and accelerate your project's growth, while ensuring a personalized and multilingual approach to each client.",
+    "subtitle": "L1/L2 tech support for SaaS & fintech. USA & Europe. Multilingual. Save up to 30% — launch in 3–5 days.",
     "stats": {
       "clients": "Satisfied Clients",
       "experience": "Years of Experience",
@@ -28,122 +28,122 @@
   },
   "about": {
     "title": "About SUPPORA",
-    "subtitle": "SUPPORA is a team of experts specializing in providing multilingual technical solutions and two-tier support for SaaS, fintech projects and services. Our goal: to improve the efficiency and quality of customer service by optimizing business processes and reducing the workload on internal teams.",
+    "subtitle": "L1/L2 tech support experts for SaaS & fintech. We cut costs and unload your team — without quality loss.",
     "features": [
       {
         "title": "Reliability",
-        "description": "We guarantee flawless execution of commitments and high standards of service"
+        "description": "We meet commitments and SLA standards"
       },
       {
         "title": "Speed",
-        "description": "Rapid implementation of solutions and flexible adaptation to your business's unique needs"
+        "description": "Launch in 3–5 days, flexible setup for your product"
       },
       {
         "title": "Quality",
-        "description": "We use cutting-edge technologies and industry best practices to ensure exceptional service levels"
+        "description": "API, logs, SQL — we handle complex issues"
       }
     ],
     "mission": {
       "title": "Our Mission",
-      "description": "We help SaaS and fintech projects achieve maximum efficiency through professional two-tier technical support and business process optimization.",
+      "description": "Maximum support efficiency at minimum cost.",
       "stats": [
         {
           "number": "20+",
-          "label": "successfully completed projects"
+          "label": "completed projects"
         },
         {
           "number": "10+",
-          "label": "specialists with deep technical expertise and multilingual skills"
+          "label": "specialists: tech expertise + multilingual"
         },
         {
           "number": "99+",
-          "label": "cool balls and beans"
+          "label": "SLA compliance"
         }
       ]
     },
     "values": {
       "title": "Our Values",
       "items": [
-        "Transparency: openness and honesty in every step of our collaboration",
-        "Individual approach: solutions tailored to each client's unique needs",
-        "Continuous development: constant improvement of processes and technologies for your success",
-        "Customer focus: focus on maximum satisfaction and support of our partners"
+        "Transparency: honesty in every step",
+        "Individual approach: solutions for your needs",
+        "Development: constant process improvement",
+        "Customer focus: your success is our priority"
       ]
     }
   },
   "services": {
     "title": "Our Services",
-    "subtitle": "Our full range of services includes two-tier technical support, SaaS and fintech project management, multilingual service, as well as solution adaptation to your business's unique needs.",
+    "subtitle": "L1/L2 support, SaaS & fintech, multilingual. Solutions tailored to your needs.",
     "items": [
       {
         "icon": "📞",
         "title": "Technical Support L1",
-        "description": "Professional customer support in any language",
+        "description": "Support in any language, 24/7",
         "features": [
           "Multi-channel support (Email, chats, calls)",
           "Monitoring & Alert response",
           "Customer-centric approach"
         ],
-        "expandedContent": "Our Level 1 technical support team ensures fast and efficient handling of customer inquiries. We operate 24/7, guaranteeing minimal response time and maximum customer satisfaction. Our specialists undergo regular training and certification to maintain high service standards."
+        "expandedContent": "L1: fast inquiry handling, Email/chats/calls. Min. response time, SLA, regular agent training."
       },
       {
         "icon": "📊",
         "title": "Technical Support L1 and L2",
-        "description": "Professional customer support in any language",
+        "description": "Support in any language, 24/7",
         "features": [
           "Multi-channel support (Email, chats, calls)",
           "Monitoring & Alert response",
           "Customer-centric approach"
         ],
-        "expandedContent": "Our comprehensive two-tier support system allows us to effectively handle tasks of any complexity. Level 1 handles standard inquiries, while Level 2 specializes in complex technical issues requiring deep expertise. This ensures optimal workload distribution and maximum team efficiency."
+        "expandedContent": "L1 + L2: standard inquiries and complex technical issues. API, logs, SQL. Optimal workload distribution."
       }
     ],
     "button": "Learn More",
     "buttonCollapse": "Show Less",
     "cta": {
-      "title": "Need a personalized consultation?",
-      "description": "Our experts will help you find the optimal solution for your business",
+      "title": "Need a consultation?",
+      "description": "We'll find the right solution for your business",
       "button": "Request Consultation"
     }
   },
   "advantages": {
     "title": "Why Choose SUPPORA",
-    "subtitle": "We provide comprehensive solutions that help companies reach new heights in efficiency",
+    "subtitle": "Solutions that boost efficiency and cut costs",
     "items": [
       {
         "number": "01",
         "title": "Multilingual Support (RU, UA, EN, ES...)",
-        "description": "Save up to 30% on operational costs through process optimization",
+        "description": "Save up to 30% on operational costs",
         "icon": "💰"
       },
       {
         "number": "02",
         "title": "Remote Scalable Teams (1–10+ agents)",
-        "description": "40% productivity increase through automation",
+        "description": "+40% productivity",
         "icon": "⚡"
       },
       {
         "number": "03",
         "title": "Fast Launch (3–5 days)",
-        "description": "Flexible solutions that grow with your business",
+        "description": "Flexible, scalable solutions",
         "icon": "📈"
       },
       {
         "number": "04",
         "title": "Technical Expertise (API, logs, SQL)",
-        "description": "24/7 technical support and monitoring",
+        "description": "24/7 support and monitoring",
         "icon": "🛡️"
       },
       {
         "number": "05",
         "title": "Flexibility and Security (GDPR, VPN access, reports)",
-        "description": "Compliance with all security and data protection standards",
+        "description": "GDPR, VPN, reports",
         "icon": "🔒"
       },
       {
         "number": "06",
         "title": "Human-centered Culture",
-        "description": "Project launch within 2-4 weeks with minimal risks",
+        "description": "Launch in 2–4 weeks, minimal risks",
         "icon": "🚀"
       }
     ],
@@ -163,7 +163,7 @@
     ],
     "cta": {
       "title": "Ready to improve your business efficiency?",
-      "description": "Get a free consultation and learn how SUPPORA can optimize your processes and help your project/clients.",
+      "description": "Free consultation — learn how to save up to 30%.",
       "primaryButton": "Get Consultation",
       "chartLabels": {
         "before": "Before",
@@ -173,18 +173,18 @@
   },
   "testimonials": {
     "title": "Client Testimonials",
-    "subtitle": "Over 500 companies trust us with optimizing their business processes",
+    "subtitle": "500+ companies trust us",
     "items": [
       {
         "name": "Alexander Petrov",
         "position": "CEO, TechCorp",
         "company": "Technology Company",
         "rating": 5,
-        "text": "SUPPORA helped us reduce operational costs by 35% and significantly improve customer service quality. Professional team and excellent results.",
+        "text": "Cut costs by 35%, service quality soared. Professional team — excellent results.",
         "results": [
-          "-60% time on HR",
+          "-35% costs",
           "+40% efficiency",
-          "100% compliance with standards"
+          "100% SLA"
         ]
       },
       {
@@ -192,11 +192,11 @@
         "position": "Development Director, RetailPlus",
         "company": "Retail Chain",
         "rating": 5,
-        "text": "Thanks to HR process outsourcing, we were able to focus on strategic development. SUPPORA ensures high quality and reliability.",
+        "text": "Unloaded our team — focused on product. SUPPORA delivers reliability and quality.",
         "results": [
-          "-60% time on HR",
+          "-35% costs",
           "+40% efficiency",
-          "100% compliance with standards"
+          "100% SLA"
         ]
       },
       {
@@ -204,7 +204,7 @@
         "position": "CFO, FinanceGroup",
         "company": "Financial Group",
         "rating": 5,
-        "text": "Excellent work with financial processes. Automation and optimization helped us reduce document processing time by 3 times.",
+        "text": "Cut inquiry processing time by 3x. Efficiency and accuracy.",
         "results": [
           "-70% processing time",
           "+90% accuracy",
@@ -239,10 +239,10 @@
   },
   "contact": {
     "title": "Contact Us",
-    "subtitle": "Ready to start working together? Submit a request and we'll contact you within an hour",
+    "subtitle": "Submit a request — we'll respond within an hour",
     "info": {
       "title": "Contact Information",
-      "description": "We're always ready to answer your questions and discuss collaboration opportunities. Choose your preferred contact method."
+      "description": "We'll answer your questions and discuss collaboration. Choose your preferred contact method."
     },
     "form": {
       "title": "Submit Request",
@@ -282,7 +282,7 @@
     ]
   },
   "footer": {
-    "description": "Your reliable partner in BPO services. We optimize business processes to increase efficiency and reduce costs.",
+    "description": "L1/L2 tech support for SaaS & fintech. Save up to 30%, launch in 3–5 days.",
     "links": {
       "company": "Company",
       "services": "Services",
@@ -319,15 +319,15 @@
   },
   "metadata": {
     "applicationName": "SUPPORA",
-    "title": "SUPPORA - BPO Services for Your Business",
-    "description": "SUPPORA - professional BPO services for business process optimization. Reduce operational costs by up to 30% and increase efficiency.",
-    "keywords": ["BPO", "outsourcing", "business processes", "optimization", "customer support", "data processing"],
+    "title": "SUPPORA — L1/L2 Tech Support for SaaS & Fintech",
+    "description": "L1/L2 tech support for SaaS & fintech. Save up to 30%, launch in 3–5 days.",
+    "keywords": ["tech support", "L1 L2", "SaaS", "fintech", "multilingual support", "support outsourcing"],
     "openGraph": {
-      "title": "SUPPORA - BPO Services for Your Business",
-      "description": "Professional BPO solutions to improve your business efficiency"
+      "title": "SUPPORA — L1/L2 Tech Support for SaaS & Fintech",
+      "description": "L1/L2 tech support — save up to 30%"
     },
     "twitter": {
-      "description": "SUPPORA - BPO services for business optimization"
+      "description": "SUPPORA — SaaS & fintech tech support"
     }
   }
 }

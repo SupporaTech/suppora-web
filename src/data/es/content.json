@@ -10,7 +10,7 @@
   },
   "hero": {
     "title": "Optimice las operaciones de su negocio con",
-    "subtitle": "Proporcionamos soporte técnico profesional de dos niveles, atendiendo a clientes en Estados Unidos y Europa en múltiples idiomas. La sólida experiencia técnica de nuestro equipo ayuda a reducir los costos operativos y acelerar el crecimiento de su proyecto, garantizando un enfoque personalizado y multilingüe para cada cliente.",
+    "subtitle": "Soporte técnico L1/L2 para SaaS y fintech. USA y Europa. Multilingüe. Ahorre hasta 30% — lanzamiento en 3–5 días.",
     "stats": {
       "clients": "Clientes Satisfechos",
       "experience": "Años de Experiencia",
@@ -28,122 +28,122 @@
   },
   "about": {
     "title": "Acerca de SUPPORA",
-    "subtitle": "SUPPORA es un equipo de expertos especializados en proporcionar soluciones técnicas multilingües y soporte de dos niveles para proyectos y servicios SaaS y fintech. Nuestro objetivo: mejorar la eficiencia y calidad del servicio al cliente optimizando los procesos empresariales y reduciendo la carga de trabajo de los equipos internos.",
+    "subtitle": "Expertos en soporte técnico L1/L2 para SaaS y fintech. Reducimos costos y descargamos su equipo — sin perder calidad.",
     "features": [
       {
         "title": "Confiabilidad",
-        "description": "Garantizamos la ejecución impecable de compromisos y altos estándares de servicio"
+        "description": "Cumplimos compromisos y estándares SLA"
       },
       {
         "title": "Velocidad",
-        "description": "Implementación rápida de soluciones y adaptación flexible a las necesidades únicas de su negocio"
+        "description": "Lanzamiento en 3–5 días, configuración flexible para su producto"
       },
       {
         "title": "Calidad",
-        "description": "Utilizamos tecnologías de vanguardia y mejores prácticas de la industria para garantizar niveles excepcionales de servicio"
+        "description": "API, logs, SQL — resolvemos problemas complejos"
       }
     ],
     "mission": {
       "title": "Nuestra Misión",
-      "description": "Ayudamos a proyectos SaaS y fintech a alcanzar la máxima eficiencia mediante soporte técnico profesional de dos niveles y optimización de procesos empresariales.",
+      "description": "Máxima eficiencia del soporte con mínimo costo.",
       "stats": [
         {
           "number": "20+",
-          "label": "proyectos completados exitosamente"
+          "label": "proyectos completados"
         },
         {
           "number": "10+",
-          "label": "especialistas con profunda experiencia técnica y habilidades multilingües"
+          "label": "especialistas: experiencia técnica + multilingüe"
         },
         {
           "number": "99+",
-          "label": "bolas y frijoles geniales"
+          "label": "cumplimiento SLA"
         }
       ]
     },
     "values": {
       "title": "Nuestros Valores",
       "items": [
-        "Transparencia: apertura y honestidad en cada paso de nuestra colaboración",
-        "Enfoque individual: soluciones adaptadas a las necesidades únicas de cada cliente",
-        "Desarrollo continuo: mejora constante de procesos y tecnologías para su éxito",
-        "Orientación al cliente: enfoque en la máxima satisfacción y apoyo de nuestros socios"
+        "Transparencia: honestidad en cada paso",
+        "Enfoque individual: soluciones para sus necesidades",
+        "Desarrollo: mejora constante de procesos",
+        "Orientación al cliente: su éxito es nuestra prioridad"
       ]
     }
   },
   "services": {
     "title": "Nuestros Servicios",
-    "subtitle": "Nuestra gama completa de servicios incluye soporte técnico de dos niveles, gestión de proyectos SaaS y fintech, servicio multilingüe, así como adaptación de soluciones a las necesidades únicas de su negocio.",
+    "subtitle": "Soporte L1/L2, SaaS y fintech, multilingüe. Soluciones adaptadas a sus necesidades.",
     "items": [
       {
         "icon": "📞",
         "title": "Soporte Técnico L1",
-        "description": "Soporte profesional al cliente en cualquier idioma",
+        "description": "Soporte en cualquier idioma, 24/7",
         "features": [
           "Soporte multicanal (Email, chats, llamadas)",
           "Monitoreo y respuesta a Alertas",
           "Enfoque centrado en el cliente"
         ],
-        "expandedContent": "Nuestro equipo de soporte técnico de nivel 1 garantiza un manejo rápido y eficiente de las consultas de los clientes. Operamos 24/7, garantizando un tiempo de respuesta mínimo y la máxima satisfacción del cliente. Nuestros especialistas se someten a formación y certificación regular para mantener altos estándares de servicio."
+        "expandedContent": "L1: manejo rápido de consultas, Email/chats/llamadas. Tiempo mínimo de respuesta, SLA, formación regular."
       },
       {
         "icon": "📊",
         "title": "Soporte Técnico L1 y L2",
-        "description": "Soporte profesional al cliente en cualquier idioma",
+        "description": "Soporte en cualquier idioma, 24/7",
         "features": [
           "Soporte multicanal (Email, chats, llamadas)",
           "Monitoreo y respuesta a Alertas",
           "Enfoque centrado en el cliente"
         ],
-        "expandedContent": "Nuestro sistema integral de soporte de dos niveles nos permite manejar eficazmente tareas de cualquier complejidad. El Nivel 1 maneja consultas estándar, mientras que el Nivel 2 se especializa en problemas técnicos complejos que requieren experiencia profunda. Esto asegura una distribución óptima de la carga de trabajo y la máxima eficiencia del equipo."
+        "expandedContent": "L1 + L2: consultas estándar y problemas técnicos complejos. API, logs, SQL. Distribución óptima de carga."
       }
     ],
     "button": "Más Información",
     "buttonCollapse": "Mostrar Menos",
     "cta": {
-      "title": "¿Necesita una consultoría personalizada?",
-      "description": "Nuestros expertos le ayudarán a encontrar la solución óptima para su negocio",
+      "title": "¿Necesita consultoría?",
+      "description": "Encontraremos la solución adecuada para su negocio",
       "button": "Solicitar Consultoría"
     }
   },
   "advantages": {
     "title": "Por Qué Elegir SUPPORA",
-    "subtitle": "Proporcionamos soluciones integrales que ayudan a las empresas a alcanzar nuevas alturas en eficiencia",
+    "subtitle": "Soluciones que aumentan la eficiencia y reducen costos",
     "items": [
       {
         "number": "01",
         "title": "Soporte Multilingüe (RU, UA, EN, ES...)",
-        "description": "Ahorre hasta un 30% en costos operativos mediante optimización de procesos",
+        "description": "Ahorre hasta 30% en costos operativos",
         "icon": "💰"
       },
       {
         "number": "02",
         "title": "Equipos Remotos Escalables (1–10+ agentes)",
-        "description": "Aumento del 40% en productividad mediante automatización",
+        "description": "+40% productividad",
         "icon": "⚡"
       },
       {
         "number": "03",
         "title": "Lanzamiento Rápido (3–5 días)",
-        "description": "Soluciones flexibles que crecen con su negocio",
+        "description": "Soluciones flexibles y escalables",
         "icon": "📈"
       },
       {
         "number": "04",
         "title": "Experiencia Técnica (API, registros, SQL)",
-        "description": "Soporte técnico y monitoreo 24/7",
+        "description": "Soporte y monitoreo 24/7",
         "icon": "🛡️"
       },
       {
         "number": "05",
         "title": "Flexibilidad y Seguridad (GDPR, acceso VPN, informes)",
-        "description": "Cumplimiento de todos los estándares de seguridad y protección de datos",
+        "description": "GDPR, VPN, informes",
         "icon": "🔒"
       },
       {
         "number": "06",
         "title": "Cultura Centrada en las Personas",
-        "description": "Lanzamiento de proyectos en 2-4 semanas con riesgos mínimos",
+        "description": "Lanzamiento en 2–4 semanas, riesgos mínimos",
         "icon": "🚀"
       }
     ],
@@ -163,7 +163,7 @@
     ],
     "cta": {
       "title": "¿Listo para mejorar la eficiencia de su negocio?",
-      "description": "Obtenga una consultoría gratuita y descubra cómo SUPPORA puede optimizar sus procesos y ayudar a su proyecto/clientes.",
+      "description": "Consulta gratuita — descubra cómo ahorrar hasta 30%.",
       "primaryButton": "Obtener Consultoría",
       "chartLabels": {
         "before": "Antes",
@@ -173,18 +173,18 @@
   },
   "testimonials": {
     "title": "Testimonios de Clientes",
-    "subtitle": "Más de 500 empresas confían en nosotros para optimizar sus procesos empresariales",
+    "subtitle": "500+ empresas confían en nosotros",
     "items": [
       {
         "name": "Alexander Petrov",
         "position": "CEO, TechCorp",
         "company": "Empresa Tecnológica",
         "rating": 5,
-        "text": "SUPPORA nos ayudó a reducir los costos operativos en un 35% y mejorar significativamente la calidad del servicio al cliente. Equipo profesional y resultados excelentes.",
+        "text": "Redujimos costos 35%, calidad del servicio creció. Equipo profesional — resultados excelentes.",
         "results": [
-          "-60% tiempo en RRHH",
+          "-35% costos",
           "+40% eficiencia",
-          "100% cumplimiento de estándares"
+          "100% SLA"
         ]
       },
       {
@@ -192,11 +192,11 @@
         "position": "Directora de Desarrollo, RetailPlus",
         "company": "Cadena de Retail",
         "rating": 5,
-        "text": "Gracias a la externalización de procesos de RRHH, pudimos enfocarnos en el desarrollo estratégico. SUPPORA garantiza alta calidad y confiabilidad.",
+        "text": "Descargamos nuestro equipo — nos enfocamos en el producto. SUPPORA garantiza confiabilidad.",
         "results": [
-          "-60% tiempo en RRHH",
+          "-35% costos",
           "+40% eficiencia",
-          "100% cumplimiento de estándares"
+          "100% SLA"
         ]
       },
       {
@@ -204,7 +204,7 @@
         "position": "CFO, FinanceGroup",
         "company": "Grupo Financiero",
         "rating": 5,
-        "text": "Excelente trabajo con procesos financieros. La automatización y optimización nos ayudaron a reducir el tiempo de procesamiento de documentos en 3 veces.",
+        "text": "Redujimos tiempo de procesamiento 3x. Eficiencia y precisión.",
         "results": [
           "-70% tiempo de procesamiento",
           "+90% precisión",
@@ -239,10 +239,10 @@
   },
   "contact": {
     "title": "Contáctenos",
-    "subtitle": "¿Listo para comenzar a trabajar juntos? Envíe una solicitud y nos pondremos en contacto con usted en una hora",
+    "subtitle": "Envíe una solicitud — respondemos en una hora",
     "info": {
       "title": "Información de Contacto",
-      "description": "Siempre estamos listos para responder sus preguntas y discutir oportunidades de colaboración. Elija su método de contacto preferido."
+      "description": "Respondemos sus preguntas y discutimos colaboración. Elija su método preferido."
     },
     "form": {
       "title": "Enviar Solicitud",
@@ -282,7 +282,7 @@
     ]
   },
   "footer": {
-    "description": "Su socio confiable en servicios BPO. Optimizamos procesos empresariales para aumentar la eficiencia y reducir costos.",
+    "description": "Soporte técnico L1/L2 para SaaS y fintech. Ahorre hasta 30%, lanzamiento en 3–5 días.",
     "links": {
       "company": "Empresa",
       "services": "Servicios",
@@ -319,15 +319,15 @@
   },
   "metadata": {
     "applicationName": "SUPPORA",
-    "title": "SUPPORA - Servicios BPO para su Negocio",
-    "description": "SUPPORA - servicios BPO profesionales para optimización de procesos empresariales. Reduzca los costos operativos hasta en un 30% y aumente la eficiencia.",
-    "keywords": ["BPO", "externalización", "procesos empresariales", "optimización", "soporte al cliente", "procesamiento de datos"],
+    "title": "SUPPORA — Soporte Técnico L1/L2 para SaaS y Fintech",
+    "description": "Soporte técnico L1/L2 para SaaS y fintech. Ahorre hasta 30%, lanzamiento en 3–5 días.",
+    "keywords": ["soporte técnico", "L1 L2", "SaaS", "fintech", "soporte multilingüe", "externalización soporte"],
     "openGraph": {
-      "title": "SUPPORA - Servicios BPO para su Negocio",
-      "description": "Soluciones BPO profesionales para mejorar la eficiencia de su negocio"
+      "title": "SUPPORA — Soporte Técnico L1/L2 para SaaS y Fintech",
+      "description": "Soporte técnico L1/L2 — ahorre hasta 30%"
     },
     "twitter": {
-      "description": "SUPPORA - servicios BPO para optimización empresarial"
+      "description": "SUPPORA — soporte técnico SaaS y fintech"
     }
   }
 }
