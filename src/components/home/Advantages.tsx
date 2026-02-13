@@ -85,10 +85,10 @@ const Advantages: React.FC = () => {
                         </div>
                         <div className="cta-visual">
                             <div className="chart-container">
-                                <div className="chart-bar" style={{ height: "60%" }}>
+                                <div className="chart-bar" style={{ height: "40%" }}>
                                     <span className="chart-label">{advantagesData.cta.chartLabels.before}</span>
                                 </div>
-                                <div className="chart-bar active" style={{ height: "40%" }}>
+                                <div className="chart-bar active" style={{ height: "60%" }}>
                                     <span className="chart-label">{advantagesData.cta.chartLabels.after}</span>
                                 </div>
                             </div>

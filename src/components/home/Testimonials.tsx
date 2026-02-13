@@ -56,7 +56,7 @@ const Testimonials: React.FC = () => {
                                     {[...Array(testimonials[currentTestimonial].rating)].map(
                                         (_, i) => (
                                             <span key={i} className="star">
-                        <StarLogo size={24} color="#E7E7E7" />
+                        <StarLogo size={24} color="#E7E7E7"  />
                       </span>
                                         )
                                     )}
@@ -74,7 +74,7 @@ const Testimonials: React.FC = () => {
                                         (result, index) => (
                                             <div key={index} className="result-item">
                                                 <span className="result-icon">
-                                                    <CheckCircleLogo size={20} color="currentColor#" />
+                                                    <CheckCircleLogo size={20} color="currentColor" />
                                                 </span>
                                                 <span className="result-text">{result}</span>
                                             </div>
@@ -144,7 +144,7 @@ const Testimonials: React.FC = () => {
 
                             ];
                             return (
-                                <div key={index} className="stat-item">
+                                <div key={index} className="testimonial-stat-item">
                                     <div className="stat-icon">{icons[index]}</div>
                                     <div className="stat-content">
                                         <div className="stat-value">{stat.value}</div>

@@ -375,6 +375,33 @@
   .hero-card {
     max-width: 350px;
     padding: 1.5rem;
+    animation: none;
+  }
+
+  /* Отключаем подсветку и анимации фоновых объектов на мобильном */
+  .hero-particles .particle {
+    animation: none;
+    opacity: 0;
+  }
+
+  .hero-shapes .shape {
+    animation: none;
+    opacity: 0;
+  }
+
+  .hero-lights .light {
+    animation: none;
+    opacity: 0;
+  }
+
+  .hero-grid {
+    animation: none;
+    opacity: 0;
+  }
+
+  .progress-fill {
+    animation: none;
+    width: 75%;
   }
 }
 
@@ -556,5 +583,44 @@
   }
   100% {
     transform: translate(50px, 50px);
+  }
+}
+
+/* Отключаем все анимации и подсветку на мобильном (в конце файла, чтобы переопределить базовые правила) */
+@media (max-width: 768px) {
+  .hero .hero-particles .particle {
+    animation: none !important;
+    opacity: 0;
+  }
+
+  .hero .hero-shapes .shape {
+    animation: none !important;
+    opacity: 0;
+  }
+
+  .hero .hero-lights .light {
+    animation: none !important;
+    opacity: 0;
+  }
+
+  .hero .hero-grid {
+    animation: none !important;
+    opacity: 0;
+  }
+
+  .hero .hero-card {
+    animation: none !important;
+  }
+
+  .hero .progress-fill {
+    animation: none !important;
+    width: 75%;
+  }
+
+  .hero .hero-text.animate-fade-in-left,
+  .hero .hero-visual.animate-fade-in-right {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
   }
 }

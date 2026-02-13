@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ruContent from "@/data/ru/content.json";
 import enContent from "@/data/en/content.json";
+import esContent from "@/data/es/content.json";
 
 import '@/styles/components/layout/navbar.scss';
 
@@ -13,7 +14,7 @@ const Header: React.FC = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
 
-    const contentData = language === 'ru' ? ruContent : enContent;
+    const contentData = language === 'ru' ? ruContent : language === 'en' ? enContent : esContent;
     const content = contentData.nav;
 
     useEffect(() => {
