@@ -74,7 +74,7 @@ const Testimonials: React.FC = () => {
                                         (result, index) => (
                                             <div key={index} className="result-item">
                                                 <span className="result-icon">
-                                                    <CheckCircleLogo size={20} color="currentColor#" />
+                                                    <CheckCircleLogo size={20} color="currentColor" />
                                                 </span>
                                                 <span className="result-text">{result}</span>
                                             </div>
