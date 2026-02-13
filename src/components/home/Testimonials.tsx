@@ -56,7 +56,7 @@ const Testimonials: React.FC = () => {
                                     {[...Array(testimonials[currentTestimonial].rating)].map(
                                         (_, i) => (
                                             <span key={i} className="star">
-                        <StarLogo size={24} color="#E7E7E7" />
+                        <StarLogo size={24} color="#E7E7E7"  />
                       </span>
                                         )
                                     )}
