@@ -144,7 +144,7 @@ const Testimonials: React.FC = () => {
 
                             ];
                             return (
-                                <div key={index} className="stat-item">
+                                <div key={index} className="testimonial-stat-item">
                                     <div className="stat-icon">{icons[index]}</div>
                                     <div className="stat-content">
                                         <div className="stat-value">{stat.value}</div>

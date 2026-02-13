@@ -244,13 +244,14 @@
   backdrop-filter: blur(24px);
 }
 
-.stats-grid {
+.testimonials-stats .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
 }
 
-.stat-item {
+/* Уникальный класс — не пересекается с .stat-item из advantages */
+.testimonial-stat-item {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -258,25 +259,58 @@
   background: rgba(255, 255, 255, 0.05);
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all var(--transition-normal);
+  transition: background-color 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  -webkit-touch-callout: none;
+  user-select: none;
 }
 
-.stat-item:hover {
-  transform: translateY(-5px);
-  border-color: var(--primary-color);
-  box-shadow: 0 15px 30px rgba(133, 92, 228, 0.1);
+/* Ховер только на устройствах с мышью */
+@media (hover: hover) {
+  .testimonial-stat-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 15px 30px rgba(133, 92, 228, 0.1);
+  }
 }
 
-.stat-icon {
+/* На мобильном и тач-устройствах ховера нет — обводка не появляется */
+@media (hover: none) {
+  .testimonial-stat-item:hover,
+  .testimonial-stat-item:active,
+  .testimonial-stat-item:focus,
+  .testimonial-stat-item:focus-visible {
+    transform: none;
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .testimonial-stat-item,
+  .testimonial-stat-item:hover,
+  .testimonial-stat-item:active,
+  .testimonial-stat-item:focus,
+  .testimonial-stat-item:focus-visible {
+    transform: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+}
+
+.testimonials-stats .stat-icon {
   font-size: 2rem;
   filter: grayscale(0);
 }
 
-.stat-content {
+.testimonials-stats .stat-content {
   flex: 1;
 }
 
-.stat-value {
+.testimonials-stats .stat-value {
   font-size: 2rem;
   font-weight: 700;
   background: var(--primary-gradient);
@@ -287,7 +321,7 @@
   margin-bottom: 0.25rem;
 }
 
-.stat-label {
+.testimonials-stats .stat-label {
   font-size: 0.9rem;
   color: var(--text-muted);
   font-weight: 500;
@@ -331,20 +365,20 @@
     padding: 2rem;
   }
 
-  .stats-grid {
+  .testimonials-stats .stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
 
-  .stat-item {
+  .testimonial-stat-item {
     padding: 1rem;
   }
 
-  .stat-icon {
+  .testimonials-stats .stat-icon {
     font-size: 1.5rem;
   }
 
-  .stat-value {
+  .testimonials-stats .stat-value {
     font-size: 1.5rem;
   }
 }
@@ -363,7 +397,7 @@
     font-size: 2.5rem;
   }
 
-  .stats-grid {
+  .testimonials-stats .stats-grid {
     grid-template-columns: 1fr;
   }
 
