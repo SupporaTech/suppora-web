@@ -55,25 +55,21 @@ const Hero: React.FC = () => {
                 <div className="hero-content">
                     <div className="hero-text animate-fade-in-left">
                         <h1 className="hero-title">
-                            {content.title}{" "}
-                            <span className="gradient-text">SUPPORA</span>
+                            {content.title}
                         </h1>
-                        <p className="hero-subtitle">
-                            {content.subtitle}
-                        </p>
+                        <div className="hero-subtitle">
+                            <p>{content.subtitle}</p>
+                            {content.subtitle2 && <p>{content.subtitle2}</p>}
+                        </div>
                         <div className="hero-stats">
-                            <div className="stat">
-                                <span className="stat-number">20+</span>
-                                <span className="stat-label">{content.stats.clients}</span>
-                            </div>
-                            <div className="stat">
-                                <span className="stat-number">5+</span>
-                                <span className="stat-label">{content.stats.experience}</span>
-                            </div>
-                            <div className="stat">
-                                <span className="stat-number">40%</span>
-                                <span className="stat-label">{content.stats.savings}</span>
-                            </div>
+                            {Array.isArray(content.stats)
+                                ? content.stats.map((s: { value: string; label: string }, i: number) => (
+                                    <div key={i} className="stat">
+                                        <span className="stat-number">{s.value}</span>
+                                        <span className="stat-label">{s.label}</span>
+                                    </div>
+                                ))
+                                : null}
                         </div>
                         <div className="hero-actions">
                             <button className="btn btn-primary" onClick={scrollToContact}>

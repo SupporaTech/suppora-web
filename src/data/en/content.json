@@ -9,15 +9,16 @@
     "consultation": "Consultation"
   },
   "hero": {
-    "title": "Optimize your business operations with",
-    "subtitle": "We provide professional two-tier technical support, serving clients in the USA and Europe in multiple languages. Our team's strong technical expertise helps reduce operational costs and accelerate your project's growth, while ensuring a personalized and multilingual approach to each client.",
-    "stats": {
-      "clients": "Satisfied Clients",
-      "experience": "Years of Experience",
-      "savings": "Cost Savings"
-    },
+    "title": "Two-tier technical support for SaaS and FinTech",
+    "subtitle": "We build remote L1 and L2 support teams for SaaS and FinTech companies.",
+    "subtitle2": "Multilingual agents, fast launch in 3–5 days, technical expertise (API, logs, SQL), and full integration into your processes.",
+    "stats": [
+      { "value": "24/7", "label": "Coverage" },
+      { "value": "3–5 days", "label": "Team launch" },
+      { "value": "L1–L2", "label": "Support depth" }
+    ],
     "buttons": {
-      "consultation": "Get Consultation"
+      "consultation": "Request a proposal"
     },
     "dashboard": {
       "title": "SUPPORA Dashboard",

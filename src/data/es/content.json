@@ -9,15 +9,16 @@
     "consultation": "Consultoría"
   },
   "hero": {
-    "title": "Optimice las operaciones de su negocio con",
-    "subtitle": "Proporcionamos soporte técnico profesional de dos niveles, atendiendo a clientes en Estados Unidos y Europa en múltiples idiomas. La sólida experiencia técnica de nuestro equipo ayuda a reducir los costos operativos y acelerar el crecimiento de su proyecto, garantizando un enfoque personalizado y multilingüe para cada cliente.",
-    "stats": {
-      "clients": "Clientes Satisfechos",
-      "experience": "Años de Experiencia",
-      "savings": "Ahorro de Costos"
-    },
+    "title": "Soporte técnico de dos niveles para SaaS y FinTech",
+    "subtitle": "Construimos equipos de soporte remotos L1 y L2 para empresas SaaS y FinTech.",
+    "subtitle2": "Agentes multilingües, lanzamiento rápido en 3–5 días, experiencia técnica (API, logs, SQL) e integración completa en sus procesos.",
+    "stats": [
+      { "value": "24/7", "label": "Cobertura" },
+      { "value": "3–5 días", "label": "Lanzamiento del equipo" },
+      { "value": "L1–L2", "label": "Profundidad de soporte" }
+    ],
     "buttons": {
-      "consultation": "Obtener Consultoría"
+      "consultation": "Solicitar propuesta"
     },
     "dashboard": {
       "title": "SUPPORA Dashboard",
